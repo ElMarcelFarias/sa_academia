@@ -1,18 +1,29 @@
 .container-fluid .text-logo:hover {
-    color: #ffc107 !important;
+    color: #394a81 !important;
     transition: .7s !important;
 }
+
+.bg-navbar {
+    background-color: #0f1b42 !important;
+}
+
+.painGain {
+    margin-top: 150px !important;
+}
+
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,.55) !important;
-    border-color: solid 10px #ffc107 !important;
+    border-color: solid 10px #394a81 !important;
 }
+
+
 
 .btn-outline-warning:hover {
     transition: .7s;
 }
 
 .offcanvas {
-    background-color : #ffc107 !important;
+    background-color : #394a81 !important;
 }
 
 .navbar-light .navbar-toggler {
