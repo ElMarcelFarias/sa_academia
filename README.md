@@ -16,6 +16,8 @@ resolução de problemas
 Contribuir para o desenvolvimento das competências de adaptabilidade e
 criatividade
 
+Front-end (Em andamento!)
+
 
 FocusBody
 
