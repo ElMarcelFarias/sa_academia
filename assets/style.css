@@ -42,11 +42,11 @@
 }
 
 .fotosecao {
-    background: linear-gradient(180deg, #15191d 0%, #d2cbcb 100%) !important;
+    background: linear-gradient(180deg, #0f1b42 0%, #2f55d4 100%) !important;
 }
 
 .fotosecao-2 {
-    background: linear-gradient(0deg, #15191d 0%, #d2cbcb 100%) !important;  
+    background: linear-gradient(0deg,  #0f1b42 0%, #2f55d4 100%) !important;  
 }
 
 .bg-card-plano{
