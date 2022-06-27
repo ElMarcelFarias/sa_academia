@@ -8,8 +8,9 @@ A ideia inicial do projeto √© criar um Software / Website para uma empresa fict√
 |      |  Landing Page  |        |
 |    :---:     |     :---:      |     :---:     |
 | ![screen1](https://user-images.githubusercontent.com/92833379/175951738-1cd19cde-d7e8-483f-ab10-3208c35ccd76.png)   | ![screen2](https://user-images.githubusercontent.com/92833379/175951792-540466d4-f0f8-47ad-95b0-d387d12f4756.png)     | ![screen3](https://user-images.githubusercontent.com/92833379/175951818-43294389-7690-46e5-9fa5-88f5b7ac7535.png)    |
-| ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175951893-678320d6-808f-4281-bf4d-9e07efb2efaf.png)      | 
+| ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175963012-08663ec6-c86c-4d0e-a686-deacb028266c.png)      | 
 <br>
+
 
 
 |  Tecnologias Utilizadas: |  (Landing Page)  |
