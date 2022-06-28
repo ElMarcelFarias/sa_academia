@@ -136,13 +136,13 @@
 
 <script>
 
-/*
+
 $(document).on('click', '.updateUser', function(){
     var id = $(this).attr('id');
 
     $("#modal_edit").html('');
     $.ajax({
-        url: 'viewUser.php',
+        url: 'viewEditSell.php',
         type: 'POST',
         cache: false,
         data: {id:id},
@@ -154,7 +154,7 @@ $(document).on('click', '.updateUser', function(){
     
 
 })
-*/
+
 
 
 
