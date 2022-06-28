@@ -20,7 +20,7 @@
 
     <div class="container mt-5">
         <button type="button" class="btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
+        <button type="button" class="btn btn-info mb-3 m-1"><a href="newCadAlunos.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
         <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
         <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
         <table class="table table-bordered">
@@ -37,14 +37,15 @@
             <tbody>
             <?php 
             
-            $sql = "SELECT * FROM vendas";
+            $sql = "SELECT a.nome as nomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
+            inner join planos as p on p.idPlano = v.planos_idPlano";
             $query = $con->query($sql) or die($con->error);
             while($row = $query->fetch_assoc()){
                 ?>
 
                 <tr>
-                    <td><?= $row['alunos_idAluno']?></td>
-                    <td><?= $row['planos_idPlano']?></td>
+                    <td><?= $row['nomeAluno']?></td>
+                    <td><?= $row['nomePlano']?></td>
                     <td><?= $row['situacao']?></td>
                     <td><?= $row['data']?></td>
                     <td><?= $row['formaPagamento']?></td>
