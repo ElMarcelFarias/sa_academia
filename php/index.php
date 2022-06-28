@@ -46,7 +46,7 @@
                     <td><?= $row['data']?></td>
                     <td><?= $row['formaPagamento']?></td>
                     <td>
-                        <!--<button type="button" class="btn btn-warning btn-sm updateUser" id="<?= //$row['idVenda']?>"><span class="material-icons align-text-bottom">edit</span></button>-->
+                        <!--<button type="button" class="btn btn-warning btn-sm updateUser" id=""><span class="material-icons align-text-bottom">edit</span></button>-->
                         <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?=$row['idVenda']?>"><span class="material-icons align-text-bottom">close</span></button>
                     </td>
                 </tr>
