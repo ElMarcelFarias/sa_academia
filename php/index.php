@@ -163,8 +163,8 @@ $(document).on('click', '.updateUser', function(){
 
 
 $(document).on('click', '.deleteSell', function(){
-    var idVenda = $(this).attr('idVenda');
-    alert(idVenda);
+    var id = $(this).attr('id');
+    alert(id);
 
     Swal.fire({
         title: 'Realmente quer fazer isto?',
@@ -179,7 +179,7 @@ $(document).on('click', '.deleteSell', function(){
             $.ajax({
                 url: 'deleteSell.php',
                 type: 'POST',
-                data: {idVenda:idVenda},
+                data: {id:id},
                 success:function(data){
                     Swal.fire({
                         title: 'Success',

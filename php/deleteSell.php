@@ -5,11 +5,10 @@ include_once 'conexaoBanco.php';
 
 
 
-if(isset($_REQUEST['idVenda'])){
-    $idVenda = $_REQUEST['idVenda'];
+if(isset($_REQUEST['id'])){
+    $idVenda = $_REQUEST['id'];
 
     $sql = "DELETE FROM vendas WHERE idVenda = '$idVenda'";
-    echo $sql;
     $query = $con->query($sql) or die($con->error);
 
 }
