@@ -16,6 +16,10 @@
     border-color: solid 10px #394a81 !important;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
 
 .btn-outline-warning:hover {

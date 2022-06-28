@@ -19,7 +19,10 @@
 
 
     <div class="container mt-5">
-        <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
+        <button type="button" class="btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
+        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
+        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
+        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
         <table class="table table-bordered">
             <thead>
                 <tr>
