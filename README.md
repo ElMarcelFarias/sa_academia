@@ -33,7 +33,7 @@ Contribuir para o desenvolvimento das competências de adaptabilidade e
 criatividade
 
 (BACK-END EM ANDAMENTO)
-Algumas telas de cadastro em produção
+Cadastro de Alunos em andamento 
 
 
 <br>
