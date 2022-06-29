@@ -11,12 +11,11 @@ A ideia inicial do projeto √© criar um Software / Website para uma empresa fict√
 | ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175963012-08663ec6-c86c-4d0e-a686-deacb028266c.png)      | 
 <br>
 
+|   Tecnologias Utilizadas:   |  (Landing Page)  |    (CRUD)    |
+|    :---:     |     :---:      |    :---:      |
+| <img align="center" alt="Marcel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>   | <img align="center" alt="Marcel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>     | <img align="center" alt="Marcel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>    |
+| <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />     | <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />       | <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>      |
 
-
-|  Tecnologias Utilizadas: |  (Landing Page)  |
-| :---: | :---: |
-|  <img align="center" alt="Marcel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/> |  <img align="center" alt="Marcel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/> |
-|  <img align="center" alt="Marcel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/> |  <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /> |
 
 <br>
 
