@@ -170,13 +170,56 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
-<script src="../js/mascaras.js"></script>
+<script src="../js/jquery.mask.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+
 <script>
 
 
-$(document).ready(function(){
+$(document).ready(function () { 
+    var cpf = $('#alunos_cpf');
+    cpf.mask('000.000.000-00', {reverse: false});
+});
 
-    $(".cpf").mask("999.999.999-99");
+$(function(){
+    //Executa a requisição quando o campo username perder o foco
+    $('#alunos_cpf').blur(function()
+    {
+        var cpf = $('#alunos_cpf').val().replace(/[^0-9]/g, '').toString();
+
+        if( cpf.length == 11 )
+        {
+            var v = [];
+
+            //Calcula o primeiro dígito de verificação.
+            v[0] = 1 * cpf[0] + 2 * cpf[1] + 3 * cpf[2];
+            v[0] += 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5];
+            v[0] += 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
+            v[0] = v[0] % 11;
+            v[0] = v[0] % 10;
+
+            //Calcula o segundo dígito de verificação.
+            v[1] = 1 * cpf[1] + 2 * cpf[2] + 3 * cpf[3];
+            v[1] += 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6];
+            v[1] += 7 * cpf[7] + 8 * cpf[8] + 9 * v[0];
+            v[1] = v[1] % 11;
+            v[1] = v[1] % 10;
+
+            //Retorna Verdadeiro se os dígitos de verificação são os esperados.
+            if ( (v[0] != cpf[9]) || (v[1] != cpf[10]) )
+            {
+                Swal.fire(
+                    'Erro',
+                    'Por favor, preencha um CPF válido!',
+                    'error'
+                    )
+
+                $('#alunos_cpf').val('');
+                $('#alunos_cpf').focus();
+            }
+        }
+        
+    });
 });
 
 /*
