@@ -23,6 +23,21 @@
         <button type="button" class="btn btn-info mb-3 m-1"><a href="newCadAlunos.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
         <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
         <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
+
+        <h4 class="titulos">Pesquisa</h4>
+	
+	<form action="#" method="GET">
+		<div class="form-group">
+		  <label class="control-label" for="textoPesquisa">Nome </label>  			
+			 <input class="form-control" id="textoPesquisa" type="text" name="pesquisa">
+			 <button type="submit" class="botaoAcao">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			 </button>			 
+		</div>
+	</form>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -40,24 +55,36 @@
             $sql = "SELECT a.nome as nomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
             inner join planos as p on p.idPlano = v.planos_idPlano";
             $query = $con->query($sql) or die($con->error);
-            while($row = $query->fetch_assoc()){
-                ?>
 
-                <tr>
-                    <td><?= $row['nomeAluno']?></td>
-                    <td><?= $row['nomePlano']?></td>
-                    <td><?= $row['situacao']?></td>
-                    <td><?= $row['data']?></td>
-                    <td><?= $row['formaPagamento']?></td>
+            if(isset($_GET['pesquisa']) && $_GET['pesquisa']!=""){
+				$pesquisa=$_GET['pesquisa'];
+				$sql = $sql. " WHERE a.nome LIKE '".$pesquisa."%'";
+			}
+            $resultado=mysqli_query($con,$sql);
+			$pessoasRetornadas=array();
+			$linhas=mysqli_num_rows($resultado);
+			if($linhas==0){
+				echo"<tr><td colspan='6'>Nenhuma pessoa foi encontrada!</td></tr>";
+			}else{
+				while($p = mysqli_fetch_assoc($resultado)){
+					array_push($pessoasRetornadas, $p);
+				}
+				foreach($pessoasRetornadas as $p){
+					echo "<tr>";
+					echo "<td>".$p['nomeAluno']."</td>";
+					echo "<td>".$p['nomePlano']."</td>";
+					echo "<td>".$p['situacao']."</td>";
+					echo "<td>".$p['data']."</td>";
+					echo "<td>".$p['formaPagamento']."</td>";
+                    ?>
                     <td>
-                        <!--<button type="button" class="btn btn-warning btn-sm updateUser" id=""><span class="material-icons align-text-bottom">edit</span></button>-->
-                        <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?=$row['idVenda']?>"><span class="material-icons align-text-bottom">close</span></button>
+                        <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?php echo $p['idVenda'];?>"><span class="material-icons align-text-bottom">close</span></button>
                     </td>
-                </tr>
-                <?php
+                    <?php
+                }
             }
+        ?>
 
-            ?>
             </tbody>
         </table>
     </div>
@@ -73,7 +100,7 @@
                                 <div class="form-group">
                                     <label for="alunos_vendas">Alunos</label>
                                     <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
-                                        <option value="1">testeAlunos</option>
+                                        <option value="2">testeAlunos</option>
                                         <?php ?>
                                     </select>
                                 </div>
