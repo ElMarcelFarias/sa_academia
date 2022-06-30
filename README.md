@@ -33,7 +33,8 @@ Contribuir para o desenvolvimento das competências de adaptabilidade e
 criatividade
 
 (BACK-END EM ANDAMENTO)
-Cadastro de Alunos em andamento 
+Cadastro de Alunos em andamento
+Funcionalidade de SEARCH implementada no cadastro de vendas
 
 
 <br>
