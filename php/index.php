@@ -19,24 +19,32 @@
 
 
     <div class="container mt-5">
-        <button type="button" class="btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="newCadAlunos.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
+        <div class="row">
+            <div class="col-sm-6 col-md-8">
+                <button type="button" class="btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
+                <button type="button" class="btn btn-info mb-3 m-1"><a href="newCadAlunos.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
+                <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
+                <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
+            </div>
 
-        <h4 class="titulos">Pesquisa</h4>
-	
-	<form action="#" method="GET">
-		<div class="form-group">
-		  <label class="control-label" for="textoPesquisa">Nome </label>  			
-			 <input class="form-control" id="textoPesquisa" type="text" name="pesquisa">
-			 <button type="submit" class="botaoAcao">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-				</svg>
-			 </button>			 
-		</div>
-	</form>
+            <div class="form-inline col-6 col-md-4 justify-content-end">
+                <form action="#" method="GET">
+                    <div class="form-group">			
+                        <div class="input-group mb-3">
+                            <input type="text" id="textoPesquisa" class="form-control" placeholder="Pesquise..." name="pesquisa" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                            <button type="submit" class="botaoAcao btn" id="button-addon2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>	
+                            </div>
+                        </div>
+                                
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <table class="table table-bordered">
             <thead>
