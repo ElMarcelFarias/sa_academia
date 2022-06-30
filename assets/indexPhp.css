@@ -1,0 +1,14 @@
+.cabecalho {
+    background-color: #0f1b42 !important;
+}
+
+.botaoAcao {
+    color: #fff;
+    background-color: #0f1b42;
+    border-color: #0f1b42;
+}
+.botaoAcao:hover {
+    transition: 0.5s;
+    background-color: #253469;
+}
+

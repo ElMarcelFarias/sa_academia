@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/indexPhp.css">
     <title>Focus Body | ADM</title>
 </head>
 <body>
     
-    <div class="container-fluid bg-info py-2 text-center">
+    <div class="cabecalho container-fluid bg-info py-2 text-center">
         <h2 style="color: #FFF;">Alunos</h2>
     </div>
 
 
     <div class="container mt-5">
-        <button type="button" class="btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newAlunosModal"><span class="material-icons align-text-bottom">add</span></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="index.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">sell</span></a></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
-        <button type="button" class="btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
+        <button type="button" class="botaoAcao btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newAlunosModal"><span class="material-icons align-text-bottom">add</span></button>
+        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="index.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">sell</span></a></button>
+        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
+        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
         <table class="table table-bordered">
             <thead>
                 <tr>
