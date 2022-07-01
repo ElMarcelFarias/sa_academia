@@ -34,8 +34,11 @@ criatividade
 
 (BACK-END EM ANDAMENTO)
 Cadastro de Alunos em andamento
-Funcionalidade de SEARCH implementada no cadastro de vendas
-Novo layout
+
+Demandas para segunda-feira:
+Finalizar o CRUD de alunos
+Finalizar o search de alunos
+
 
 
 <br>
