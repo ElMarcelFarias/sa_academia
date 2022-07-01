@@ -21,16 +21,16 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 
 
 
-O projeto tem como objetivo:
+<b>O projeto tem como objetivo:</b>
 
-proporcionar melhores práticas ao desenvolvimento de
-soluções para situações desafiadoras.
+<i>proporcionar melhores práticas ao desenvolvimento de
+soluções para situações desafiadoras.</i>
 
-Contribuir para o desenvolvimento da capacidade de análise crítica e
-resolução de problemas
+<i>Contribuir para o desenvolvimento da capacidade de análise crítica e
+resolução de problemas</i>
 
-Contribuir para o desenvolvimento das competências de adaptabilidade e
-criatividade
+<i>Contribuir para o desenvolvimento das competências de adaptabilidade e
+criatividade</i>
 
 (BACK-END EM ANDAMENTO)
 Cadastro de Alunos em andamento
@@ -38,6 +38,10 @@ Cadastro de Alunos em andamento
 Demandas para segunda-feira:
 Finalizar o CRUD de alunos
 Finalizar o search de alunos
+
+
+Coisas para o futuro
+Relatório em PDF botão ao lado do search
 
 
 
