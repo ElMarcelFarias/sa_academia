@@ -21,10 +21,10 @@
 
     <div class="container mt-5">
         <button type="button" class="botaoAcao btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newAlunosModal"><span class="material-icons align-text-bottom">add</span></button>
-        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="index.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">sell</span></a></button>
-        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
-        <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
-        <table class="table table-bordered">
+        <a href="index.php" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">sell</span></button></a>
+        <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">badge</span></button></a>
+        <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">note_add</span></button></a>
+        <table class="table table-responsive">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -69,13 +69,13 @@
     </div>
 
     <div class="modal fade" id="newAlunosModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered modalAlunos">
             <div class="modal-content">
                 <form id="newAlunosForm" method="POST">
                     <div class="modal-body">
                         <div class="row">
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_nome">Nome</label>
                                     <input type="text" class="form-control" name="alunos_nome" id="alunos_nome" style="text-transform: uppercase;">
@@ -83,7 +83,7 @@
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_sobrenome">Sobrenome</label>
                                     <input type="text" class="form-control" name="alunos_sobrenome" id="alunos_sobrenome" style="text-transform: uppercase;">
@@ -106,52 +106,62 @@
                             
 
 
-
-
-
-
-
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="alunos_cep">CEP</label>
+                                    <input type="text" class="form-control" name="alunos_cep" id="alunos_cep" onblur="preencherEndereco(this.value)" style="text-transform: uppercase;">
+                                </div>
+                            </div>
 
 
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="planos_vendas">Planos</label>
-                                    <select name="planos_vendas" id="planos_vendas" class="custom-select">
-                                        <option value="1">testePlanos</option>
-                                        <?php ?>
+                                    <label for="alunos_cidade">Cidade</label>
+                                    <input type="text" class="form-control" name="alunos_cidade" id="alunos_cidade">
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="alunos_bairro">Bairro</label>
+                                    <input type="text" class="form-control" name="alunos_bairro" id="alunos_bairro">
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="alunos_rua">Rua</label>
+                                    <input type="text" class="form-control" name="alunos_rua" id="alunos_rua">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="alunos_numero">Número</label>
+                                    <input type="text" class="form-control" name="alunos_numero" id="alunos_numero" maxlength="6" style="text-transform: uppercase;">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="alunos_sexo">Sexo</label>
+                                    <select name="alunos_sexo" id="alunos_sexo" class="custom-select">
+                                        <option value="1">Masculino</option>
+                                        <option value="2">Feminino</option>
                                     </select>
                                 </div>
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="situacao_vendas">Situação</label>
-                                    <select name="situacao_vendas" id="situacao_vendas" class="custom-select">
-                                        <option value="Ativo">Ativo</option>
-                                        <option value="Inativo">Inativo</option>
-                                    </select>
+                                    <label for="alunos_data">Data</label>
+                                    <input type="date" class="form-control" name="alunos_data" id="alunos_data">
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="data_vendas">Data</label>
-                                    <input type="date" class="form-control" name="data_vendas" id="data_vendas">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="formaPagamento_vendas">Forma de Pagamento</label>
-                                    <select name="formaPagamento_vendas" id="formaPagamento_vendas" class="custom-select">
-                                        <option value="Boleto">Boleto</option>
-                                        <option value="Female">Crédito - Á vista</option>
-                                        <option value="Female">Débito</option>
-                                        <option value="Female">PIX</option>
-                                    </select>
-                                </div>
-                            </div>
 
                             
 
@@ -180,7 +190,12 @@
 $(document).ready(function () { 
     var cpf = $('#alunos_cpf');
     cpf.mask('000.000.000-00', {reverse: false});
+
+    var cep = $('#alunos_cep');
+    cep.mask('00000-000', {reverse: false});
 });
+
+
 
 $(function(){
     //Executa a requisição quando o campo username perder o foco
@@ -222,6 +237,30 @@ $(function(){
         
     });
 });
+
+//API VIA CEP 
+
+function preencherEndereco(cep){
+    $('#alunos_cidade').val('');
+    $('#alunos_bairro').val('');
+    $('#alunos_rua').val('');
+
+    $.getJSON("https://viacep.com.br/ws/"+cep+"/json/?callback=?", function(dados) {
+        if (!("erro" in dados)) {       
+            $("#alunos_rua").val(dados.logradouro);
+            $("#alunos_bairro").val(dados.bairro);
+            $("#alunos_cidade").val(dados.localidade);                                
+        }else {                        
+            Swal.fire(
+                    'Erro',
+                    'CEP não encontrado! Preencha o endereço manualmente.',
+                    'error'
+                    )
+        }
+     });
+}
+
+
 
 /*
 $(document).on('click', '.updateUser', function(){
@@ -287,21 +326,25 @@ $(document).on('click', '.deleteSell', function(){
 
 
 
-
-
-
 // Adicionar um campo, via AJAX SweetAlerts2
     $(document).ready(function(){
-        $("#newSellForm").submit(function(e){
+        $("#newAlunosForm").submit(function(e){
             e.preventDefault();
 
-            var alunos_vendas = $("#alunos_vendas").val();
-            var planos_vendas = $("#planos_vendas").val();
-            var situacao_vendas = $("#situacao_vendas").val();
-            var data_vendas = $("#data_vendas").val();
-            var formaPagamento_vendas = $("#formaPagamento_vendas").val();
+            var alunos_nome = $("#alunos_nome").val(); 
+            var alunos_sobrenome = $("#alunos_sobrenome").val();
+            var alunos_rg = $("#alunos_rg").val();
+            var alunos_cpf = $("#alunos_cpf").val();
+            var alunos_cep = $("#alunos_cep").val();
+            var alunos_cidade = $("#alunos_cidade").val();
+            var alunos_bairro = $("#alunos_bairro").val();
+            var alunos_rua = $("#alunos_rua").val();
+            var alunos_numero = $("#alunos_numero").val();
+            var alunos_sexo = $("#alunos_sexo").val();
+            var alunos_data = $("#alunos_data").val();
 
-            if(situacao_vendas == '' || data_vendas == '') {
+            
+            if(alunos_nome == '' || alunos_sobrenome == '' || alunos_rg == ''  || alunos_cpf == '' || alunos_cep == '' /* || alunos_cidade == '' || alunos_bairro == '' || alunos_rua == '' || alunos_numero == '' || alunos_data == ''*/) {
                 Swal.fire(
                     'Erro',
                     'Por favor, preencha os campos corretamente!',
@@ -309,15 +352,15 @@ $(document).on('click', '.deleteSell', function(){
                     )
             } else {
                 $.ajax({
-                    url: 'newSell.php',
+                    url: 'newAlunos.php',
                     type: 'POST',
                     data: $(this).serialize(),
                     cache: false,
                     success:function(data){
-                        $('#newSellModal').hide();
+                        $('#newAlunosModal').hide();
                         Swal.fire({
                             title: 'Success',
-                            text: 'Usuário adicionado com sucesso!',
+                            text: 'Aluno adicionado com sucesso!',
                             icon: 'success'
                         }).then(()=>{
                             window.location.reload();
@@ -325,7 +368,7 @@ $(document).on('click', '.deleteSell', function(){
                         
                     }
                 })
-            }
+            } 
         })
     })
     

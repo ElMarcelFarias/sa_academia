@@ -23,9 +23,9 @@
         <div class="row">
             <div class="col-sm-6 col-md-8">
                 <button type="button" class="botaoAcao btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
-                <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="newCadAlunos.php" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">fitness_center</span></a></button>
-                <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">badge</span></a></button>
-                <button type="button" class="botaoAcao btn btn-info mb-3 m-1"><a href="../index.html" class="text-decoration-none"><span class="material-icons align-text-bottom text-white">note_add</span></a></button>
+                <a href="newCadAlunos.php" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">fitness_center</span></button></a>
+                <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">badge</span></button></a>
+                <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">note_add</span></button></a>
             </div>
 
             <div class="form-inline col-6 col-md-4 justify-content-end">
@@ -98,72 +98,74 @@
         </table>
     </div>
 
-    <div class="modal fade" id="newSellModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form id="newSellForm" method="POST">
-                    <div class="modal-body">
-                        <div class="row">
+    <div class="container">
+        <div class="modal fade" id="newSellModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="newSellForm" method="POST">
+                        <div class="modal-body">
+                            <div class="row">
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="alunos_vendas">Alunos</label>
-                                    <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
-                                        <option value="2">testeAlunos</option>
-                                        <?php ?>
-                                    </select>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="alunos_vendas">Alunos</label>
+                                        <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
+                                            <option value="2">testeAlunos</option>
+                                            <?php ?>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="planos_vendas">Planos</label>
-                                    <select name="planos_vendas" id="planos_vendas" class="custom-select">
-                                        <option value="1">testePlanos</option>
-                                        <?php ?>
-                                    </select>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="planos_vendas">Planos</label>
+                                        <select name="planos_vendas" id="planos_vendas" class="custom-select">
+                                            <option value="1">testePlanos</option>
+                                            <?php ?>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="situacao_vendas">Situação</label>
-                                    <select name="situacao_vendas" id="situacao_vendas" class="custom-select">
-                                        <option value="Ativo">Ativo</option>
-                                        <option value="Inativo">Inativo</option>
-                                    </select>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="situacao_vendas">Situação</label>
+                                        <select name="situacao_vendas" id="situacao_vendas" class="custom-select">
+                                            <option value="Ativo">Ativo</option>
+                                            <option value="Inativo">Inativo</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="data_vendas">Data</label>
-                                    <input type="date" class="form-control" name="data_vendas" id="data_vendas">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="data_vendas">Data</label>
+                                        <input type="date" class="form-control" name="data_vendas" id="data_vendas">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="formaPagamento_vendas">Forma de Pagamento</label>
-                                    <select name="formaPagamento_vendas" id="formaPagamento_vendas" class="custom-select">
-                                        <option value="Boleto">Boleto</option>
-                                        <option value="Female">Crédito - Á vista</option>
-                                        <option value="Female">Débito</option>
-                                        <option value="Female">PIX</option>
-                                    </select>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="formaPagamento_vendas">Forma de Pagamento</label>
+                                        <select name="formaPagamento_vendas" id="formaPagamento_vendas" class="custom-select">
+                                            <option value="Boleto">Boleto</option>
+                                            <option value="Female">Crédito - Á vista</option>
+                                            <option value="Female">Débito</option>
+                                            <option value="Female">PIX</option>
+                                        </select>
+                                    </div>
                                 </div>
+
+                                
+
                             </div>
-
-                            
-
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
-                        <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
-                    </div>
-                </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
+                            <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -194,8 +196,6 @@ $(document).on('click', '.updateUser', function(){
     
 
 })
-
-
 
 
 
@@ -238,11 +238,6 @@ $(document).on('click', '.deleteSell', function(){
 
 
 
-
-
-
-
-
 // Adicionar um campo, via AJAX SweetAlerts2
     $(document).ready(function(){
         $("#newSellForm").submit(function(e){
@@ -270,7 +265,7 @@ $(document).on('click', '.deleteSell', function(){
                         $('#newSellModal').hide();
                         Swal.fire({
                             title: 'Success',
-                            text: 'Usuário adicionado com sucesso!',
+                            text: 'Venda cadastrada com sucesso!',
                             icon: 'success'
                         }).then(()=>{
                             window.location.reload();
