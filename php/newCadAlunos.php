@@ -146,7 +146,7 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_sexo">Forma de Pagamento</label>
+                                    <label for="alunos_sexo">Sexo</label>
                                     <select name="alunos_sexo" id="alunos_sexo" class="custom-select">
                                         <option value="1">Masculino</option>
                                         <option value="2">Feminino</option>
@@ -190,7 +190,12 @@
 $(document).ready(function () { 
     var cpf = $('#alunos_cpf');
     cpf.mask('000.000.000-00', {reverse: false});
+
+    var cep = $('#alunos_cep');
+    cep.mask('00000-000', {reverse: false});
 });
+
+
 
 $(function(){
     //Executa a requisição quando o campo username perder o foco
@@ -254,11 +259,6 @@ function preencherEndereco(cep){
         }
      });
 }
-
-
-
-
-
 
 
 
@@ -326,21 +326,27 @@ $(document).on('click', '.deleteSell', function(){
 
 
 
-
-
-
 // Adicionar um campo, via AJAX SweetAlerts2
     $(document).ready(function(){
-        $("#newSellForm").submit(function(e){
+        $("#newAlunosForm").submit(function(e){
             e.preventDefault();
 
-            var alunos_vendas = $("#alunos_vendas").val();
-            var planos_vendas = $("#planos_vendas").val();
-            var situacao_vendas = $("#situacao_vendas").val();
-            var data_vendas = $("#data_vendas").val();
-            var formaPagamento_vendas = $("#formaPagamento_vendas").val();
+            var alunos_nome = $("#alunos_nome").val(); 
+            var alunos_sobrenome = $("#alunos_sobrenome").val();
+            var alunos_rg = $("#alunos_rg").val();
+            var alunos_cpf = $("#alunos_cpf").val();
+            var alunos_cep = $("#alunos_cep").val();
+            var alunos_cidade = $("#alunos_cidade").val();
+            var alunos_bairro = $("#alunos_bairro").val();
+            var alunos_rua = $("#alunos_rua").val();
+            var alunos_numero = $("#alunos_numero").val();
+            var alunos_sexo = $("#alunos_sexo").val();
+            var alunos_data = $("#alunos_data").val();
 
-            if(situacao_vendas == '' || data_vendas == '') {
+          
+
+            
+            if(alunos_nome == '' || alunos_sobrenome == '' || alunos_rg == '' || alunos_cpf == '' || alunos_cep == '' || alunos_cidade == '' || alunos_bairro == '' || alunos_rua == '' || alunos_numero == '' || alunos_data == '') {
                 Swal.fire(
                     'Erro',
                     'Por favor, preencha os campos corretamente!',
@@ -364,7 +370,7 @@ $(document).on('click', '.deleteSell', function(){
                         
                     }
                 })
-            }
+            } 
         })
     })
     
