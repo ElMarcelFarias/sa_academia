@@ -265,7 +265,7 @@ $(document).on('click', '.deleteSell', function(){
                         $('#newSellModal').hide();
                         Swal.fire({
                             title: 'Success',
-                            text: 'Usuário adicionado com sucesso!',
+                            text: 'Venda cadastrada com sucesso!',
                             icon: 'success'
                         }).then(()=>{
                             window.location.reload();

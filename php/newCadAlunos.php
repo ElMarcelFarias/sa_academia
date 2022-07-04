@@ -24,7 +24,7 @@
         <a href="index.php" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">sell</span></button></a>
         <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">badge</span></button></a>
         <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">note_add</span></button></a>
-        <table class="table table-bordered">
+        <table class="table table-responsive">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -343,10 +343,8 @@ $(document).on('click', '.deleteSell', function(){
             var alunos_sexo = $("#alunos_sexo").val();
             var alunos_data = $("#alunos_data").val();
 
-          
-
             
-            if(alunos_nome == '' || alunos_sobrenome == '' || alunos_rg == '' || alunos_cpf == '' || alunos_cep == '' || alunos_cidade == '' || alunos_bairro == '' || alunos_rua == '' || alunos_numero == '' || alunos_data == '') {
+            if(alunos_nome == '' || alunos_sobrenome == '' || alunos_rg == ''  || alunos_cpf == '' || alunos_cep == '' /* || alunos_cidade == '' || alunos_bairro == '' || alunos_rua == '' || alunos_numero == '' || alunos_data == ''*/) {
                 Swal.fire(
                     'Erro',
                     'Por favor, preencha os campos corretamente!',
@@ -354,15 +352,15 @@ $(document).on('click', '.deleteSell', function(){
                     )
             } else {
                 $.ajax({
-                    url: 'newSell.php',
+                    url: 'newAlunos.php',
                     type: 'POST',
                     data: $(this).serialize(),
                     cache: false,
                     success:function(data){
-                        $('#newSellModal').hide();
+                        $('#newAlunosModal').hide();
                         Swal.fire({
                             title: 'Success',
-                            text: 'Usuário adicionado com sucesso!',
+                            text: 'Aluno adicionado com sucesso!',
                             icon: 'success'
                         }).then(()=>{
                             window.location.reload();
