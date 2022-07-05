@@ -144,16 +144,21 @@
     </section>
 
     
-
-    <div class="container">
-        <div class="modal fade" id="newSellModal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <form id="newSellForm" method="POST">
+    <div class="modal fade" id="newSellModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Vendas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="material-icons ">close</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="newSellForm" method="POST">
                         <div class="modal-body">
                             <div class="row">
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="alunos_vendas">Alunos</label>
                                         <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
@@ -163,7 +168,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="planos_vendas">Planos</label>
                                         <select name="planos_vendas" id="planos_vendas" class="custom-select">
@@ -174,7 +179,7 @@
                                 </div>
 
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="situacao_vendas">Situação</label>
                                         <select name="situacao_vendas" id="situacao_vendas" class="custom-select">
@@ -184,7 +189,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="data_vendas">Data</label>
                                         <input type="date" class="form-control" name="data_vendas" id="data_vendas">
@@ -207,13 +212,14 @@
 
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
-                            <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
+                        <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
+                    </div>
+                </form>
+
             </div>
+          </div>
         </div>
     </div>
 
