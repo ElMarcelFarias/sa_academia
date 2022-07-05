@@ -108,7 +108,7 @@
                 <tbody>
                 <?php
 
-                    $sql = "SELECT a.nome as nomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
+                    $sql = "SELECT a.nome as nomeAluno, a.sobrenome as sobrenomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
                     inner join planos as p on p.idPlano = v.planos_idPlano";
                     $query = $con->query($sql) or die($con->error);
 
@@ -116,7 +116,7 @@
                         ?>
         
                         <tr>
-                            <td><?= $row['nomeAluno']?></td>
+                            <td><?= $row['nomeAluno'].' '.$row['sobrenomeAluno']?></td>
                             <td><?= $row['nomePlano']?></td>
                             <td><?= $row['situacao']?></td>
                             <td><?= $row['data']?></td>
