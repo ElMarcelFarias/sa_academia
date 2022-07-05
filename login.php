@@ -99,22 +99,36 @@
         </section><!--end section-->
         <!-- Hero End -->
 
-        <!-- Start Style switcher -->
-        <!-- End Style switcher -->
-
-        <!-- javascript -->
+  
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrollspy.min.js"></script>
-        <!-- Icons -->
         <script src="js/feather.min.js"></script>
         <script src="../../../unicons.iconscout.com/release/v2.1.9/script/monochrome/bundle.js"></script>
-        <!-- Switcher -->
         <script src="js/switcher.js"></script>
-        <!-- Main Js -->
         <script src="js/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
+        <script src="../js/jquery.mask.js"></script>
+        <script src="../js/jquery.mask.min.js"></script>
+        
     </body>
 
-<!-- Mirrored from www.shreethemes.in/landrick/layouts/auth-cover-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jul 2020 14:00:20 GMT -->
+    
+
+    <?php if(isset($_GET['return'])) { ?>
+
+        <script>
+            Swal.fire(
+                    'Erro',
+                    'Usuário ou/e senha incorreto! Por favor, tente novamente.',
+                    'error'
+                    )
+        </script>
+    <?php } ?>
+
+
+    
+
 </html>
