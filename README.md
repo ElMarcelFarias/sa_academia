@@ -33,7 +33,8 @@ resolução de problemas</i>
 criatividade</i>
 
 (BACK-END EM ANDAMENTO)
-Cadastro de Alunos em andamento
+Cadastro de Alunos concluído
+Falta coisas
 
 Demandas para segunda-feira:
 Finalizar o CRUD de alunos
