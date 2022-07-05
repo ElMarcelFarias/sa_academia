@@ -110,7 +110,7 @@
                                     <div class="form-group">
                                         <label for="alunos_vendas">Alunos</label>
                                         <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
-                                            <option value="2">testeAlunos</option>
+                                            <option value="1">COLOCAR O SELECT DO BANCO</option>
                                             <?php ?>
                                         </select>
                                     </div>
@@ -120,7 +120,7 @@
                                     <div class="form-group">
                                         <label for="planos_vendas">Planos</label>
                                         <select name="planos_vendas" id="planos_vendas" class="custom-select">
-                                            <option value="1">testePlanos</option>
+                                            <option value="1">COLOCAR O SELECT DO BANCO</option>
                                             <?php ?>
                                         </select>
                                     </div>
@@ -148,10 +148,10 @@
                                     <div class="form-group">
                                         <label for="formaPagamento_vendas">Forma de Pagamento</label>
                                         <select name="formaPagamento_vendas" id="formaPagamento_vendas" class="custom-select">
-                                            <option value="Boleto">Boleto</option>
-                                            <option value="Female">Crédito - Á vista</option>
-                                            <option value="Female">Débito</option>
-                                            <option value="Female">PIX</option>
+                                            <option value="BOLETO">Boleto</option>
+                                            <option value="CREDITO">Crédito - Á vista</option>
+                                            <option value="DEBITO">Débito</option>
+                                            <option value="PIX">PIX</option>
                                         </select>
                                     </div>
                                 </div>
@@ -204,7 +204,6 @@ $(document).on('click', '.updateUser', function(){
 
 $(document).on('click', '.deleteSell', function(){
     var id = $(this).attr('id');
-    alert(id);
 
     Swal.fire({
         title: 'Realmente quer fazer isto?',
