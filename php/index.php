@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
@@ -80,8 +81,7 @@
             <div class="row page-tilte align-items-center">
               <div class="col-md-auto">
                 <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
-                <h1 class="weight-300 h3 title">Data Grid</h1>
-                <p class="text-muted m-0 desc">Dynamic data grid.</p>
+                <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">sell</span> Vendas </h1>
               </div> 
               <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
                 <div class="controls d-flex justify-content-center justify-content-md-end">
@@ -116,10 +116,10 @@
                         ?>
         
                         <tr>
-                            <td><?= $row['nomeAluno'].' '.$row['sobrenomeAluno']?></td>
+                            <td><?= strtoupper($row['nomeAluno'].' '.$row['sobrenomeAluno'])?></td>
                             <td><?= $row['nomePlano']?></td>
                             <td><?= $row['situacao']?></td>
-                            <td><?= $row['data']?></td>
+                            <td><?= date('d/m/Y', strtotime($row['data'])) ?></td>
                             <td><?= $row['formaPagamento']?></td>
                             <td>
                                 <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?=$row['idVenda']?>"><span class="material-icons align-text-bottom">delete</span></button>
@@ -144,16 +144,21 @@
     </section>
 
     
-
-    <div class="container">
-        <div class="modal fade" id="newSellModal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <form id="newSellForm" method="POST">
+    <div class="modal fade" id="newSellModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Vendas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="material-icons ">close</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="newSellForm" method="POST">
                         <div class="modal-body">
                             <div class="row">
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="alunos_vendas">Alunos</label>
                                         <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
@@ -163,7 +168,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="planos_vendas">Planos</label>
                                         <select name="planos_vendas" id="planos_vendas" class="custom-select">
@@ -174,7 +179,7 @@
                                 </div>
 
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="situacao_vendas">Situação</label>
                                         <select name="situacao_vendas" id="situacao_vendas" class="custom-select">
@@ -184,7 +189,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="data_vendas">Data</label>
                                         <input type="date" class="form-control" name="data_vendas" id="data_vendas">
@@ -207,13 +212,14 @@
 
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
-                            <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
+                        <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
+                    </div>
+                </form>
+
             </div>
+          </div>
         </div>
     </div>
 
