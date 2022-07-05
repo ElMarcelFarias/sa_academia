@@ -1,3 +1,27 @@
+* {
+    font-family: "GTWalsheim";
+}
+
+body {
+    margin: 0;
+    font-family: "GTWalsheim";
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #4E565A;
+    text-align: left;
+    background-color: #F5F7FA;
+}
+
+html {
+    font-family: "GTWalsheim";
+}
+
+section {
+    font-family: "GTWalsheim";
+}
+
+
 .container-fluid .text-logo:hover {
     color: #394a81 !important;
     transition: .7s !important;
@@ -56,3 +80,30 @@ a {
 .bg-card-plano{
     background-color: #15191d; 
 }
+
+
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url("../assets/fonts/gt-walsheim/GTWalsheimLight.eot") format("embedded-opentype"), url("../assets/fonts/gt-walsheim/GTWalsheimProTrial-Thin.otf") format("opentype"), url("../assets/fonts/gt-walsheim/GTWalsheimProTrial-Thin.woff") format("woff"), url("../assets/fonts/gt-walsheim/GTWalsheimProTrial-Thin.ttf") format("truetype"), url("../assets/fonts/gt-walsheim/GTWalsheimProTrial-Thin.svg#GTWalsheimProTrial-Thin") format("svg");
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GTWalsheim';
+    src: url("../assets/fonts/gt-walsheim/GTWalsheimLight.eot") format("embedded-opentype"), url("../assets/fonts/gt-walsheim/GTWalsheimLight.woff") format("woff"), url("../assets/fonts/gt-walsheim/GTWalsheimLight.ttf") format("truetype"), url("../assets/fonts/gt-walsheim/GTWalsheimLight.svg#GTWalsheimLight") format("svg");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GTWalsheim';
+    src: url("../assets/fonts/gt-walsheim/GTWalsheimLight.eot") format("embedded-opentype"), url("../assets/fonts/gt-walsheim/GTWalsheim.woff") format("woff"), url("../assets/fonts/gt-walsheim/GTWalsheim.ttf") format("truetype"), url("../assets/fonts/gt-walsheim/GTWalsheim.svg#GTWalsheim") format("svg");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GTWalsheim';
+    src: url("../assets/fonts/gt-walsheim/GTWalsheimLight.eot") format("embedded-opentype"), url("../assets/fonts/gt-walsheim/GTWalsheimBold.woff") format("woff"), url("../assets/fonts/gt-walsheim/GTWalsheimBold.ttf") format("truetype"), url("../assets/fonts/gt-walsheim/GTWalsheimBold.svg#GTWalsheimBold") format("svg");
+    font-weight: 500;
+    font-style: normal;
+  }

@@ -9,94 +9,141 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/indexPhp.css">
+
+    <link rel="stylesheet" href="../assets/css/basestyle/style.css">
+    <script src="../assets/js/lib/jquery.min.js"></script>
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/datatables/DataTables-1.11.5/css/dataTables.bootstrap4.css"></script>
+    <script src="../assets/css/dataTables.responsive.css"></script>
+
+
+    
+    <!--<link rel="stylesheet" href="../css/indexPhp.css">-->
     <title>Focus Body | ADM</title>
 </head>
 <body>
     
-    <div class="cabecalho container-fluid bg-info py-2 text-center">
-        <h2 style="color: #FFF;">Vendas</h2>
-    </div>
-
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-sm-6 col-md-8">
-                <button type="button" class="botaoAcao btn btn-info mb-3 m-1" data-toggle="modal" data-target="#newSellModal"><span class="material-icons align-text-bottom">add</span></button>
-                <a href="newCadAlunos.php" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">fitness_center</span></button></a>
-                <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">badge</span></button></a>
-                <a href="../index.html" class="text-decoration-none"><button type="button" class="botaoAcao btn btn-info mb-3 m-1"><span class="material-icons align-text-bottom text-white">note_add</span></button></a>
-            </div>
-
-            <div class="form-inline col-6 col-md-4 justify-content-end">
-                <form action="#" method="GET">
-                    <div class="form-group">			
-                        <div class="input-group mb-3">
-                            <input type="text" id="textoPesquisa" class="form-control" placeholder="Pesquise..." name="pesquisa" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                            <button type="submit" class="botaoAcao btn" id="button-addon2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
-                            </button>	
-                            </div>
-                        </div>
-                                
-                    </div>
-                </form>
-            </div>
+    <!-- Pre Loader-->
+    <div class="loader-wrapper">
+        <div class="spinner">
+          <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+          </svg>
+          <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+          </svg>
+          <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+          </svg>
+          <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+          </svg>
         </div>
+    </div>    
+    <!-- Pre Loader-->
 
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Aluno</th>
-                    <th>Plano</th>
-                    <th>Situação</th>
-                    <th>Data</th>
-                    <th>Forma de pagamento</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php 
-            
-            $sql = "SELECT a.nome as nomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
-            inner join planos as p on p.idPlano = v.planos_idPlano";
-            $query = $con->query($sql) or die($con->error);
 
-            if(isset($_GET['pesquisa']) && $_GET['pesquisa']!=""){
-				$pesquisa=$_GET['pesquisa'];
-				$sql = $sql. " WHERE a.nome LIKE '".$pesquisa."%'";
-			}
-            $resultado=mysqli_query($con,$sql);
-			$pessoasRetornadas=array();
-			$linhas=mysqli_num_rows($resultado);
-			if($linhas==0){
-				echo"<tr><td colspan='6'>Nenhuma pessoa foi encontrada!</td></tr>";
-			}else{
-				while($p = mysqli_fetch_assoc($resultado)){
-					array_push($pessoasRetornadas, $p);
-				}
-				foreach($pessoasRetornadas as $p){
-					echo "<tr>";
-					echo "<td>".$p['nomeAluno']."</td>";
-					echo "<td>".$p['nomePlano']."</td>";
-					echo "<td>".$p['situacao']."</td>";
-					echo "<td>".$p['data']."</td>";
-					echo "<td>".$p['formaPagamento']."</td>";
-                    ?>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?php echo $p['idVenda'];?>"><span class="material-icons align-text-bottom">close</span></button>
-                    </td>
-                    <?php
-                }
-            }
-        ?>
+    <section class="wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <nav class="navbar navbar-dark bg-primary">
+              <a class="navbar-brand m-0 py-2 brand-title" href="#">Focus Admin</a>
+              <span></span>
+              <a class="navbar-brand py-2 material-icons toggle-sidebar" href="#">menu</a>
+            </nav>
 
-            </tbody>
-        </table>
-    </div>
+            <nav class="navigation">
+              <ul>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newSellModal" title="Adicionar nova Venda"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li title="Cadastro de Alunos"><a href="newCadAlunos.php"><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
+                  </li>
+                  <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
+                  </li>
+                  <li title="Cadastro de Planos"><a href="../index.html"><span class="nav-icon material-icons ">note_add</span> Planos </a>
+                  </li>
+                  
+              </ul>
+                  <!--<li class="notification alert-notify"><a href="#"><span class="nav-icon material-icons">question_answer</span> Forms <span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>-->
+              </ul>
+
+              <label title="Documentação"><span>Ajuda para Usuários<span></label>
+              <ul>
+                  <li><a href="documentation.html" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+              </ul>
+            </nav>
+
+          </aside>
+
+        <div class="content-area">
+          <div class="content-wrapper">
+
+            <div class="row page-tilte align-items-center">
+              <div class="col-md-auto">
+                <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
+                <h1 class="weight-300 h3 title">Data Grid</h1>
+                <p class="text-muted m-0 desc">Dynamic data grid.</p>
+              </div> 
+              <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
+                <div class="controls d-flex justify-content-center justify-content-md-end">
+                  
+                </div>
+              </div>
+            </div> 
+
+
+                  
+            <div class="content">
+                
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Plano</th>
+                        <th>Situação</th>
+                        <th>Data</th>
+                        <th>Forma de pagamento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+
+                    $sql = "SELECT a.nome as nomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
+                    inner join planos as p on p.idPlano = v.planos_idPlano";
+                    $query = $con->query($sql) or die($con->error);
+
+                    while($row = $query->fetch_assoc()){
+                        ?>
+        
+                        <tr>
+                            <td><?= $row['nomeAluno']?></td>
+                            <td><?= $row['nomePlano']?></td>
+                            <td><?= $row['situacao']?></td>
+                            <td><?= $row['data']?></td>
+                            <td><?= $row['formaPagamento']?></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-sm deleteSell" id="<?=$row['idVenda']?>"><span class="material-icons align-text-bottom">delete</span></button>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+
+                ?>
+                    
+                </tbody>
+                    
+            </table>
+
+          </div>
+            <footer class="footer">
+              <p class="text-muted m-0"><small class="float-right">Made with <span class="material-icons md-16 text-danger align-middle">favorite</span> by Marcel Farias - Otávio Henrique</small><small >FocusBody © 2022–2022 </small></p>
+            </footer>
+
+          </div>
+        </div>
+    </section>
+
+    
 
     <div class="container">
         <div class="modal fade" id="newSellModal">
@@ -172,11 +219,39 @@
 
     <div id="modal_edit"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.min.js"></script>
+    <script src="../assets/js/datatables/DataTables-1.11.5/js/jquery.dataTables.js"></script>
+    <script src="../assets/js/datatables/DataTables-1.11.5/js/dataTables.bootstrap4.js"></script>
+    <script src="../assets/js/lib/popper.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/js/chosen-js/chosen.jquery.js"></script>
+    <script src="../assets/js/custom.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
 
 <script>
+//DataTables script 
+$(document).ready(function() {
+    $('#example').DataTable({
+        language: {
+            lengthMenu: 'Páginas disponiveis _MENU_ ',
+            zeroRecords: 'Nada encontrado, desculpe!',
+            info: 'Página _PAGE_ de _PAGES_',
+            infoEmpty: 'Não há registros disponíveis',
+            infoFiltered: '(filtrando de _MAX_ total regristros)',
+            search: 'Pesquisar',
+                "paginate": {
+                "first":      "Primeira",
+                "last":       "Last",
+                "next":       "Próxima",
+                "previous":   "Anterior"
+            },
+        },
+    });
+    
+} );
 
 
 $(document).on('click', '.updateUser', function(){
@@ -212,7 +287,7 @@ $(document).on('click', '.deleteSell', function(){
         showCancelButton: true,
         confirmButtonColor: '#28a745',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Sim, deletar!'
         }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({

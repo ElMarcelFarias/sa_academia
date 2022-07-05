@@ -1,0 +1,81 @@
+{
+  "_args": [
+    [
+      "chosen-js@1.8.3",
+      "/Users/akshaykumar/Downloads/bootstrap4c-chosen-master"
+    ]
+  ],
+  "_development": true,
+  "_from": "chosen-js@1.8.3",
+  "_id": "chosen-js@1.8.3",
+  "_inBundle": false,
+  "_integrity": "sha512-B1ruoi+9Y51W9lcw5BXBOWdWGrEGyk7sAPlBYn3tmmUKM/JelfFCrhR70tSAZ4YZlfGBdrbXTCHWxpHS/GwGCg==",
+  "_location": "/chosen-js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "chosen-js@1.8.3",
+    "name": "chosen-js",
+    "escapedName": "chosen-js",
+    "rawSpec": "1.8.3",
+    "saveSpec": null,
+    "fetchSpec": "1.8.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/chosen-js/-/chosen-js-1.8.3.tgz",
+  "_spec": "1.8.3",
+  "_where": "/Users/akshaykumar/Downloads/bootstrap4c-chosen-master",
+  "bugs": {
+    "url": "https://github.com/harvesthq/chosen/issues"
+  },
+  "contributors": [
+    {
+      "name": "Patrick Filler",
+      "url": "https://github.com/pfiller"
+    },
+    {
+      "name": "Christophe Coevoet",
+      "url": "https://github.com/stof"
+    },
+    {
+      "name": "Ken Earley",
+      "url": "https://github.com/kenearley"
+    },
+    {
+      "name": "Koen Punt",
+      "url": "https://github.com/koenpunt"
+    }
+  ],
+  "dependencies": {},
+  "description": "Chosen is a JavaScript plugin that makes select boxes user-friendly. It is currently available in both jQuery and Prototype flavors.",
+  "files": [
+    "chosen.jquery.js",
+    "chosen.jquery.min.js",
+    "chosen.proto.js",
+    "chosen.proto.min.js",
+    "chosen.css",
+    "chosen.min.css",
+    "chosen-sprite@2x.png",
+    "chosen-sprite.png"
+  ],
+  "homepage": "https://harvesthq.github.io/chosen/",
+  "keywords": [
+    "select",
+    "multiselect",
+    "dropdown",
+    "form",
+    "input",
+    "ui"
+  ],
+  "license": "MIT",
+  "main": "chosen.jquery.js",
+  "name": "chosen-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvesthq/chosen.git"
+  },
+  "version": "1.8.3"
+}
