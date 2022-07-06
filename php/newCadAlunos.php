@@ -60,7 +60,7 @@
                   </li>
                   <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
                   </li>
-                  <li title="Cadastro de Planos"><a href="../index.html"><span class="nav-icon material-icons ">note_add</span> Planos </a>
+                  <li title="Cadastro de Planos"><a href="newCadPlanos.php"><span class="nav-icon material-icons ">note_add</span> Planos </a>
                   </li>
                   
               </ul>
@@ -69,7 +69,7 @@
 
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
-                  <li><a href="documentation.html" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
               </ul>
             </nav>
 
@@ -122,7 +122,7 @@
                             <td><?= $row['cep']?></td>
                             <td><?= $row['cidade']?></td>
                             <td><?= $row['bairro']?></td>
-                            <td><?= $row['rua'].' '.$row['numero']?></td>
+                            <td><?= $row['rua'].', '.$row['numero']?></td>
                             <td><?=  date('m/Y', strtotime($row['dataNascimento']))?></td>
                             <td>
                                 <button type="button" class="btn btn-warning btn-sm updateAlunos" id="<?=$row['idAluno']?>"><span class="material-icons align-text-bottom">edit</span></button>
@@ -147,9 +147,17 @@
         </div>
     </section>
 
-    <div class="modal fade" id="newAlunosModal">
-        <div class="modal-dialog modal-dialog-centered modalAlunos">
-            <div class="modal-content">
+
+    <div class="modal fade" id="newAlunosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modalAlunos" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Alunos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="material-icons ">close</span>
+              </button>
+            </div>
+            <div class="modal-body">
                 <form id="newAlunosForm" method="POST">
                     <div class="modal-body">
                         <div class="row">
@@ -169,14 +177,14 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_rg">RG</label>
                                     <input type="text" class="form-control" name="alunos_rg" id="alunos_rg" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_cpf">CPF</label>
                                     <input type="text" class="form-control cpf" name="alunos_cpf" id="alunos_cpf" style="text-transform: uppercase;">
@@ -185,7 +193,7 @@
                             
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_cep">CEP</label>
                                     <input type="text" class="form-control" name="alunos_cep" id="alunos_cep" onblur="preencherEndereco(this.value)" style="text-transform: uppercase;">
@@ -193,7 +201,7 @@
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_cidade">Cidade</label>
                                     <input type="text" class="form-control" name="alunos_cidade" id="alunos_cidade">
@@ -201,7 +209,7 @@
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_bairro">Bairro</label>
                                     <input type="text" class="form-control" name="alunos_bairro" id="alunos_bairro">
@@ -209,14 +217,14 @@
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_rua">Rua</label>
                                     <input type="text" class="form-control" name="alunos_rua" id="alunos_rua">
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="alunos_numero">Número</label>
                                     <input type="text" class="form-control" name="alunos_numero" id="alunos_numero" maxlength="6" style="text-transform: uppercase;">
@@ -234,7 +242,7 @@
                             </div>
 
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="alunos_data">Data</label>
                                     <input type="date" class="form-control" name="alunos_data" id="alunos_data">
@@ -251,7 +259,9 @@
                         <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
                     </div>
                 </form>
+
             </div>
+          </div>
         </div>
     </div>
 

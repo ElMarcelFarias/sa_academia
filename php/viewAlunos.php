@@ -24,107 +24,119 @@ if(isset($_REQUEST['id'])){
 }
 ?>
 
-<div class="modal fade" id="updateAlunosModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-        <form id="editAlunosForm" method="POST">
+<div class="modal fade" id="updateAlunosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modalAlunos" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Alunos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="material-icons ">close</span>
+              </button>
+            </div>
             <div class="modal-body">
-                <div class="row">
+                <form id="editAlunosForm" method="POST">
+                    <div class="modal-body">
+                        <div class="row">
 
-                    <input type="hidden" value="<?= $id?>" name="alunos_id" id="alunos_id">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_name">Nome</label>
-                            <input type="text" class="form-control" name="edit_alunos_name" id="edit_alunos_name" style="text-transform: uppercase;" value="<?=$nome?>">
+                            <input type="hidden" value="<?= $id?>" name="alunos_id" id="alunos_id">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_name">Nome</label>
+                                    <input type="text" class="form-control" name="edit_alunos_name" id="edit_alunos_name" style="text-transform: uppercase;" value="<?=$nome?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_sobrenome">Sobrenome</label>
+                                    <input type="text" class="form-control" name="edit_alunos_sobrenome" id="edit_alunos_sobrenome" style="text-transform: uppercase;" value="<?=$sobrenome?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_rg">RG</label>
+                                    <input type="text" class="form-control" name="edit_alunos_rg" id="edit_alunos_rg" style="text-transform: uppercase;" value="<?=$rg?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_cpf">CPF</label>
+                                    <input type="text" class="form-control" name="edit_alunos_cpf" id="edit_alunos_cpf" value="<?=$cpf?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_cep">CEP</label>
+                                    <input type="text" class="form-control" name="edit_alunos_cep" id="edit_alunos_cep" onblur="preencherEnderecoEditAlunos(this.value)" value="<?=$cep?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_cidade">Cidade</label>
+                                    <input type="text" class="form-control" name="edit_alunos_cidade" id="edit_alunos_cidade" value="<?=$cidade?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_bairro">Bairro</label>
+                                    <input type="text" class="form-control" name="edit_alunos_bairro" id="edit_alunos_bairro" value="<?=$bairro?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_rua">Rua</label>
+                                    <input type="text" class="form-control" name="edit_alunos_rua" id="edit_alunos_rua" value="<?=$rua?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_numero">Numero</label>
+                                    <input type="text" class="form-control" name="edit_alunos_numero" id="edit_alunos_numero" value="<?=$numero?>">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="edit_alunos_sexo">Sexo</label>
+                                    <select name="edit_alunos_sexo" id="edit_alunos_sexo" class="custom-select">
+                                        <option value="1" <?= $sexo == "1"? "selected": ''?>>Masculino</option>
+                                        <option value="2" <?= $sexo == "2"? "selected": ''?>>Feminino</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="edit_alunos_dataNascimento">dataNascimento</label>
+                                    <input type="date" class="form-control" name="edit_alunos_dataNascimento" id="edit_alunos_dataNascimento" value="<?=$dataNascimento?>">
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_sobrenome">Sobrenome</label>
-                            <input type="text" class="form-control" name="edit_alunos_sobrenome" id="edit_alunos_sobrenome" style="text-transform: uppercase;" value="<?=$sobrenome?>">
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
+                        <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
                     </div>
 
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_rg">RG</label>
-                            <input type="text" class="form-control" name="edit_alunos_rg" id="edit_alunos_rg" style="text-transform: uppercase;" value="<?=$rg?>">
-                        </div>
                     </div>
+                </form>
 
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_cpf">CPF</label>
-                            <input type="text" class="form-control" name="edit_alunos_cpf" id="edit_alunos_cpf" value="<?=$cpf?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_cep">CEP</label>
-                            <input type="text" class="form-control" name="edit_alunos_cep" id="edit_alunos_cep" onblur="preencherEnderecoEditAlunos(this.value)" value="<?=$cep?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_cidade">Cidade</label>
-                            <input type="text" class="form-control" name="edit_alunos_cidade" id="edit_alunos_cidade" value="<?=$cidade?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_bairro">Bairro</label>
-                            <input type="text" class="form-control" name="edit_alunos_bairro" id="edit_alunos_bairro" value="<?=$bairro?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_rua">Rua</label>
-                            <input type="text" class="form-control" name="edit_alunos_rua" id="edit_alunos_rua" value="<?=$rua?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="edit_alunos_numero">Numero</label>
-                            <input type="text" class="form-control" name="edit_alunos_numero" id="edit_alunos_numero" value="<?=$numero?>">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="edit_alunos_sexo">Sexo</label>
-                            <select name="edit_alunos_sexo" id="edit_alunos_sexo" class="custom-select">
-                                <option value="1" <?= $sexo == "1"? "selected": ''?>>Masculino</option>
-                                <option value="2" <?= $sexo == "2"? "selected": ''?>>Feminino</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="edit_alunos_dataNascimento">dataNascimento</label>
-                            <input type="date" class="form-control" name="edit_alunos_dataNascimento" id="edit_alunos_dataNascimento" value="<?=$dataNascimento?>">
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="material-icons align-text-bottom">close</span></button>
-                <button type="submit" class="btn btn-success"><span class="material-icons align-text-bottom">done</span></button>
-            </div>
-
-            </div>
-        </form>
+          </div>
+        </div>
     </div>
-</div>
+
+
+
 
 
 

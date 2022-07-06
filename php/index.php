@@ -25,6 +25,7 @@
 <body>
     
     <!-- Pre Loader-->
+    <!--
     <div class="loader-wrapper">
         <div class="spinner">
           <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +41,7 @@
             <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
           </svg>
         </div>
-    </div>    
+    </div>-->    
     <!-- Pre Loader-->
 
 
@@ -60,7 +61,7 @@
                   </li>
                   <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
                   </li>
-                  <li title="Cadastro de Planos"><a href="../index.html"><span class="nav-icon material-icons ">note_add</span> Planos </a>
+                  <li title="Cadastro de Planos"><a href="newCadPlanos.php"><span class="nav-icon material-icons ">note_add</span> Planos </a>
                   </li>
                   
               </ul>
@@ -69,7 +70,7 @@
 
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
-                  <li><a href="documentation.html" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
               </ul>
             </nav>
 
@@ -162,8 +163,22 @@
                                     <div class="form-group">
                                         <label for="alunos_vendas">Alunos</label>
                                         <select name="alunos_vendas" id="alunos_vendas" class="custom-select">
-                                            <option value="1">COLOCAR O SELECT DO BANCO</option>
-                                            <?php ?>
+                                            <?php 
+                                            
+                                            $sqlAlunos = "SELECT * FROM alunos";
+                                            $query = $con->query($sqlAlunos) or die($con->error);
+                                            $alunosArray = array();
+
+                                            while($a = mysqli_fetch_assoc($query)) {
+                                                array_push($alunosArray, $a);
+                                            }
+
+                                            foreach($alunosArray as $alunos) {
+                                                echo "<option value='".$alunos['idAluno']."'>".strtoupper($alunos['nome'].' '.$alunos['sobrenome'])."</option>";
+                                            }
+                                            
+                                            
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -172,8 +187,22 @@
                                     <div class="form-group">
                                         <label for="planos_vendas">Planos</label>
                                         <select name="planos_vendas" id="planos_vendas" class="custom-select">
-                                            <option value="1">COLOCAR O SELECT DO BANCO</option>
-                                            <?php ?>
+                                            <?php 
+                                            
+                                            $sqlPlanos = "SELECT * FROM planos";
+                                            $query = $con->query($sqlPlanos) or die($con->error);
+                                            $planosArray = array();
+
+                                            while($a = mysqli_fetch_assoc($query)) {
+                                                array_push($planosArray, $a);
+                                            }
+
+                                            foreach($planosArray as $planos) {
+                                                echo "<option value='".$planos['idPlano']."'>".strtoupper($planos['nome'].' - '.$planos['duracao']. ' -  R$'. $planos['preco'])."</option>";
+                                            }
+                                            
+                                            
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
