@@ -16,21 +16,31 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 | <img align="center" alt="Marcel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>   | <img align="center" alt="Marcel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>     | <img align="center" alt="Marcel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>    |
 | <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />     | <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />       | <img align="center" alt="Marcel-sql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>      |
 
-
 <br>
 
+<h3>Bibliotecas Utilizadas!</h3>
 
+<li></li>
+<li></li>
+<li></li>
 
-<b>O projeto tem como objetivo:</b>
+<br>
+<br>
 
-<i>proporcionar melhores práticas ao desenvolvimento de
+<h3>O projeto tem como objetivo:</h3>
+
+<li><i>proporcionar melhores práticas ao desenvolvimento de</li>
 soluções para situações desafiadoras.</i>
 
-<i>Contribuir para o desenvolvimento da capacidade de análise crítica e
-resolução de problemas</i>
+<li><i>Contribuir para o desenvolvimento da capacidade de análise crítica e
+resolução de problemas</i></li>
 
-<i>Contribuir para o desenvolvimento das competências de adaptabilidade e
-criatividade</i>
+<li><i>Contribuir para o desenvolvimento das competências de adaptabilidade e
+criatividade</i></li>
+
+
+
+
 
 (BACK-END EM ANDAMENTO)
 Cadastro de Alunos concluído
