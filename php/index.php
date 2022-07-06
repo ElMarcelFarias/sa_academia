@@ -97,7 +97,7 @@
                   
             <div class="content">
                 
-                <table id="example" class="table table-striped mb-4 bg-white table-bordered dt-responsive">
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered">
                 <thead>
                     <tr>
                         <th>Aluno</th>
@@ -120,7 +120,7 @@
         
                         <tr>
                             <td><?= strtoupper($row['nomeAluno'].' '.$row['sobrenomeAluno'])?></td>
-                            <td><?= $row['nomePlano']?></td>
+                            <td><?= strtoupper($row['nomePlano'])?></td>
                             <td><?= $row['situacao']?></td>
                             <td><?= date('d/m/Y', strtotime($row['data'])) ?></td>
                             <td><?= $row['formaPagamento']?></td>

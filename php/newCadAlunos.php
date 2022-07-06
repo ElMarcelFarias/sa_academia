@@ -96,7 +96,7 @@
                   
             <div class="content">
                 
-                <table id="example" class="table table-striped mb-4 bg-white table-bordered dt-responsive">
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -425,19 +425,29 @@ $(document).on('click', '.deleteAlunos', function(){
                 type: 'POST',
                 data: {id:id},
                 success:function(data){
-                    Swal.fire({
-                        title: 'Success',
-                        icon: 'success',
-                        text: 'Aluno deletado com sucesso!'
-                    }).then(()=>{
-                        window.location.reload();
-                    })
+                    if(data == 'true'){
+                        Swal.fire({
+                            title: 'Success',
+                            icon: 'success',
+                            text: 'Aluno deletado com sucesso!'
+                        }).then(()=>{
+                            window.location.reload();
+                        })
+                    } else {
+                        Swal.fire(
+                            'Erro',
+                            'Não é possível excluir um aluno associado a vendas!.',
+                            'error'
+                        )
+                    }
                 }
 
             })
         }
         })
 })
+
+
 
 
 

@@ -96,7 +96,7 @@
                   
             <div class="content">
                 
-                <table id="example" class="table table-striped mb-4 bg-white table-bordered dt-responsive">
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered ">
                     <thead>
                         <tr>
                             <th style="width:50%">Nome</th>
@@ -120,6 +120,7 @@
                                 <td><?= strtoupper($row['duracao'])?></td>
                                 <td>
                                     <button type="button" class="btn btn-warning btn-sm updatePlanos" id="<?=$row['idPlano']?>"><span class="material-icons align-text-bottom">edit</span></button>
+                                    <button type="button" class="btn btn-danger btn-sm deletePlanos" id="<?=$row['idPlano']?>"><span class="material-icons align-text-bottom">close</span></button>
                                 </td>
                             </tr>
                             <?php
@@ -256,6 +257,47 @@ $(document).on('click', '.updatePlanos', function(){
 
 })
 
+// Deletar um cadastro 
+$(document).on('click', '.deletePlanos', function(){
+    var id = $(this).attr('id');
+    
+    
+    Swal.fire({
+        title: 'Realmente quer fazer isto?',
+        text: "O plano será deletado permanentemente!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28a745',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, deletar!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: 'deletePlanos.php',
+                type: 'POST',
+                data: {id:id},
+                success:function(data){
+                    if(data == 'true'){
+                        Swal.fire({
+                            title: 'Success',
+                            icon: 'success',
+                            text: 'Plano deletado com sucesso!'
+                        }).then(()=>{
+                            window.location.reload();
+                        })
+                    } else {
+                        Swal.fire(
+                            'Erro',
+                            'Não é possível excluir um plano associado a vendas!.',
+                            'error'
+                        )
+                    }
+                }
+
+            })
+        }
+        })
+})
 
 
 
