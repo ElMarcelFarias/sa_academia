@@ -56,6 +56,8 @@
             <nav class="navigation">
               <ul>
                   <li class="active"><a href="index.html" data-toggle="modal" data-target="#newPlanosModal" title="Adicionar novo Plano"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active" title="Cadastro de Planos"><a><span class="nav-icon material-icons ">note_add</span> Planos </a>
+                  </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>
                   </li>
                   <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
@@ -84,7 +86,7 @@
                 <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">note_add</span> Planos</h1>
               </div> 
               <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
-                <div class="controls d-flex justify-content-center justify-content-md-end">
+                <div class="controls d-flex justify-content-center justify-content-md-end px-2">
                   
                 </div>
               </div>
@@ -94,44 +96,44 @@
                   
             <div class="content">
                 
-                <table id="example" class="table table-striped mb-4 bg-white table-bordered">
-                <thead>
-                    <tr>
-                        <th style="width:50%">Nome</th>
-                        <th style="width:20%">Preço</th>
-                        <th style="width:20%">Duração</th>
-                        <th style="width:10%">Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-
-                    $sql = "SELECT * FROM planos";
-                    $query = $con->query($sql) or die($con->error);
-
-                    while($row = $query->fetch_assoc()){
-                        ?>
-        
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered dt-responsive">
+                    <thead>
                         <tr>
-                            <td><?= strtoupper($row['nome'])?></td>
-                            <td><?= 'R$'.$row['preco']?></td>
-                            <td><?= strtoupper($row['duracao'])?></td>
-                            <td>
-                                <button type="button" class="btn btn-warning btn-sm updatePlanos" id="<?=$row['idPlano']?>"><span class="material-icons align-text-bottom">edit</span></button>
-                            </td>
+                            <th style="width:50%">Nome</th>
+                            <th style="width:20%">Preço</th>
+                            <th style="width:20%">Duração</th>
+                            <th style="width:10%">Ação</th>
                         </tr>
-                        <?php
-                    }
+                    </thead>
+                    <tbody>
+                    <?php
 
-                ?>
-                    
-                </tbody>
-                    
-            </table>
+                        $sql = "SELECT * FROM planos";
+                        $query = $con->query($sql) or die($con->error);
+
+                        while($row = $query->fetch_assoc()){
+                            ?>
+            
+                            <tr>
+                                <td><?= strtoupper($row['nome'])?></td>
+                                <td><?= 'R$'.$row['preco']?></td>
+                                <td><?= strtoupper($row['duracao'])?></td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn-sm updatePlanos" id="<?=$row['idPlano']?>"><span class="material-icons align-text-bottom">edit</span></button>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+
+                    ?>
+                        
+                    </tbody>
+                        
+                </table>
 
           </div>
             <footer class="footer">
-              <p class="text-muted m-0"><small class="float-right">Made with <span class="material-icons md-16 text-danger align-middle">favorite</span> by Marcel Farias - Otávio Henrique</small><small >FocusBody © 2022–2022 </small></p>
+              <p class="text-muted m-0"><small class="float-right">Feito por <span class="material-icons md-16 text-danger align-middle">favorite</span> by Marcel Farias - Otávio Henrique</small><small >FocusBody © 2022–2022 </small></p>
             </footer>
 
           </div>
