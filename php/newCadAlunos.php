@@ -56,6 +56,8 @@
             <nav class="navigation">
               <ul>
                   <li class="active"><a href="index.html" data-toggle="modal" data-target="#newAlunosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
+                  </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>
                   </li>
                   <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
@@ -94,7 +96,7 @@
                   
             <div class="content">
                 
-                <table id="example" class="table table-striped mb-4 bg-white table-bordered">
+                <table id="example" class="table table-striped mb-4 bg-white table-bordered dt-responsive">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -140,7 +142,7 @@
 
           </div>
             <footer class="footer">
-              <p class="text-muted m-0"><small class="float-right">Made with <span class="material-icons md-16 text-danger align-middle">favorite</span> by Marcel Farias - Otávio Henrique</small><small >FocusBody © 2022–2022 </small></p>
+              <p class="text-muted m-0"><small class="float-right">Feito por <span class="material-icons md-16 text-danger align-middle">favorite</span> by Marcel Farias - Otávio Henrique</small><small >FocusBody © 2022–2022 </small></p>
             </footer>
 
           </div>
