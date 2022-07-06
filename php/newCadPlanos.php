@@ -69,7 +69,7 @@
 
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
-                  <li><a href="documentation.html" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
               </ul>
             </nav>
 
@@ -235,25 +235,24 @@ $(document).ready(function () {
 });
 
 
-/*
-$(document).on('click', '.updateAlunos', function(){
-    var id = $(this).attr('id');
 
+$(document).on('click', '.updatePlanos', function(){
+    var id = $(this).attr('id');
     
     $("#modal_edit").html('');
     $.ajax({
-        url: 'viewAlunos.php',
+        url: 'viewPlanos.php',
         type: 'POST',
         cache: false,
         data: {id:id},
         success:function(data){
             $("#modal_edit").html(data);
-            $("#updateAlunosModal").modal('show');
+            $("#updatePlanosModal").modal('show');
         }
     })
     
 
-})*/
+})
 
 
 

@@ -70,7 +70,7 @@
 
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
-                  <li><a href="documentation.html" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
               </ul>
             </nav>
 
