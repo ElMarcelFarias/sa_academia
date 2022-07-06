@@ -18,11 +18,13 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 
 <br>
 
-<h3>Bibliotecas Utilizadas!</h3>
+<h3>Frameworks e Bibliotecas Utilizadas!</h3>
 
-<li></li>
-<li></li>
-<li></li>
+<li><i>Datatables</i></li>
+<li><i>Sweetalert2</i></li>
+<li><i>AOS</i></li>
+<li><i>Jquery</i></li>
+<li><i>Bootstrap 4</i></li>
 
 <br>
 <br>
@@ -39,7 +41,7 @@ resolução de problemas</i></li>
 criatividade</i></li>
 
 
-
+<hr>
 
 
 (BACK-END EM ANDAMENTO)
