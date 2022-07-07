@@ -49,8 +49,8 @@ Cadastro de Alunos concluído
 Falta coisas
 
 Demandas para segunda-feira:
-Finalizar o CRUD de alunos
-Finalizar o search de alunos
+TODOS OS CRUDS FINALIZADOS, FALTA REALIZAR O README
+
 
 
 Coisas para o futuro
