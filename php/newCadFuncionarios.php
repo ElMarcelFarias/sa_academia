@@ -83,7 +83,7 @@
             <div class="row page-tilte align-items-center">
               <div class="col-md-auto">
                 <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">badge</span></a>
-                <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">fitness_center</span> Funcionário</h1>
+                <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">badge</span> Funcionário</h1>
               </div> 
               <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
                 <div class="controls d-flex justify-content-center justify-content-md-end">
