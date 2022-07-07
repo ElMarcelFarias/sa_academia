@@ -11,6 +11,15 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 | ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175963012-08663ec6-c86c-4d0e-a686-deacb028266c.png)      | 
 <br>
 
+<h3><i>Situação Problema:</i></h3>
+<hr>
+<p>
+Devido a necessidade, foi apresentada a seguinte situação problema: "Uma academia está tendo problemas para realizar a venda de seus planos, devido a demanda muito alta de alunos novos. Esses planos são ofertados e vendidos via telefone. Os alunos possuem um cadastro que é preenchido pelo atendente da academia ao entrarem em contato com a mesma, onde geralmente é pedido o nome do aluno completo, CPF, e-mail, RG, qual o plano gostaria de adquirir, mostrando os benefícios do mesmo e forma de pagamento(boleto, débito, crédito, dinheiro). Com o aumento expressivo de alunos novos, vem gerando problemas ao preencher e atualizar esses dados à mão, além de excluir os alunos que já não fazem mais parte do estabelecimento."
+
+Após definida a situação problema, foi realizada o levantamento de requisitos e então se iniciou o desenvolvimento dos CRUD's:
+</p>
+<br>
+
 |   Tecnologias Utilizadas:   |  (Landing Page)  |    (CRUD)    |
 |    :---:     |     :---:      |    :---:      |
 | <img align="center" alt="Marcel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>   | <img align="center" alt="Marcel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>     | <img align="center" alt="Marcel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>    |
