@@ -55,12 +55,12 @@
 
             <nav class="navigation">
               <ul>
-                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newAlunosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Add</a></li>
-                  <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newFuncionariosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">badge</span> Funcionário </a>
                   </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>
                   </li>
-                  <li title="Cadastro de Funcionários"><a href="newCadFuncionarios.php"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
+                  <li title="Cadastro de Funcionários"><a href="newCadAlunos.php"><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
                   </li>
                   <li title="Cadastro de Planos"><a href="newCadPlanos.php"><span class="nav-icon material-icons ">note_add</span> Planos </a>
                   </li>
@@ -82,8 +82,8 @@
 
             <div class="row page-tilte align-items-center">
               <div class="col-md-auto">
-                <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
-                <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">fitness_center</span> Alunos</h1>
+                <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">badge</span></a>
+                <h1 class="weight-300 h3 title"><span class="nav-icon material-icons ">fitness_center</span> Funcionário</h1>
               </div> 
               <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
                 <div class="controls d-flex justify-content-center justify-content-md-end">
@@ -101,10 +101,9 @@
                     <tr>
                         <th>Nome</th>
                         <th>CPF</th>
-                        <th>CEP</th>
-                        <th>Cidade</th>
-                        <th>Bairro</th>
-                        <th>Rua</th>
+                        <th>Desc. Cargo</th>
+                        <th>Salário</th>
+                        <th>Carga Horária</th>
                         <th>Data de Nascimento</th>
                         <th>Ação</th>
                     </tr>
@@ -112,7 +111,7 @@
                 <tbody>
                 <?php
 
-                    $sql = "SELECT * FROM alunos";
+                    $sql = "SELECT * FROM funcionarios";
                     $query = $con->query($sql) or die($con->error);
 
                     while($row = $query->fetch_assoc()){
@@ -121,14 +120,13 @@
                         <tr>
                             <td><?= strtoupper($row['nome'].' '.$row['sobrenome'])?></td>
                             <td><?= $row['cpf']?></td>
-                            <td><?= $row['cep']?></td>
-                            <td><?= $row['cidade']?></td>
-                            <td><?= $row['bairro']?></td>
-                            <td><?= $row['rua'].', '.$row['numero']?></td>
+                            <td><?= strtoupper($row['descCargo'])?></td>
+                            <td><?= $row['salario']?></td>
+                            <td><?= $row['cargaHoraria']?></td>
                             <td><?=  date('m/Y', strtotime($row['dataNascimento']))?></td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm updateAlunos" id="<?=$row['idAluno']?>"><span class="material-icons align-text-bottom">edit</span></button>
-                                <button type="button" class="btn btn-danger btn-sm deleteAlunos" id="<?=$row['idAluno']?>"><span class="material-icons align-text-bottom">close</span></button>
+                                <button type="button" class="btn btn-warning btn-sm updateFuncionarios" id="<?=$row['idFuncionario']?>"><span class="material-icons align-text-bottom">edit</span></button>
+                                <button type="button" class="btn btn-danger btn-sm deleteFuncionarios" id="<?=$row['idFuncionario']?>"><span class="material-icons align-text-bottom">close</span></button>
                             </td>
                         </tr>
                         <?php
@@ -150,46 +148,67 @@
     </section>
 
 
-    <div class="modal fade" id="newAlunosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modalAlunos" role="document">
+    <div class="modal fade" id="newFuncionariosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modalFuncionarios" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Alunos</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Cadastro de Funcionarios</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span class="material-icons ">close</span>
               </button>
             </div>
             <div class="modal-body">
-                <form id="newAlunosForm" method="POST">
+                <form id="newFuncionariosForm" method="POST">
                     <div class="modal-body">
                         <div class="row">
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_nome">Nome</label>
-                                    <input type="text" class="form-control" name="alunos_nome" id="alunos_nome" style="text-transform: uppercase;">
+                                    <label for="funcionario_nome">Nome</label>
+                                    <input type="text" class="form-control" name="funcionario_nome" id="funcionario_nome" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_sobrenome">Sobrenome</label>
-                                    <input type="text" class="form-control" name="alunos_sobrenome" id="alunos_sobrenome" style="text-transform: uppercase;">
+                                    <label for="funcionario_sobrenome">Sobrenome</label>
+                                    <input type="text" class="form-control" name="funcionario_sobrenome" id="funcionario_sobrenome" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_rg">RG</label>
-                                    <input type="text" class="form-control" name="alunos_rg" id="alunos_rg" style="text-transform: uppercase;">
+                                    <label for="funcionario_descargo">Descrição do Cargo</label>
+                                    <input type="text" class="form-control" name="funcionario_descargo" id="funcionario_descargo" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_cpf">CPF</label>
-                                    <input type="text" class="form-control cpf" name="alunos_cpf" id="alunos_cpf" style="text-transform: uppercase;">
+                                    <label for="funcionario_cargahoraria">Carga Horária <small class="text-muted">(Semanal)</small></label>
+                                    <input type="number" class="form-control" max-lenght="3" name="funcionario_cargahoraria" id="funcionario_cargahoraria" style="text-transform: uppercase;">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="funcionario_salario">Salário</label>
+                                    <input type="number" class="form-control" name="funcionario_salario" id="funcionario_salario" style="text-transform: uppercase;">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="funcionario_rg">RG</label>
+                                    <input type="text" class="form-control" name="funcionario_rg" id="funcionario_rg" style="text-transform: uppercase;">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="funcionario_cpf">CPF</label>
+                                    <input type="text" class="form-control cpf" name="funcionario_cpf" id="funcionario_cpf" style="text-transform: uppercase;">
                                 </div>
                             </div>
                             
@@ -197,46 +216,46 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_cep">CEP</label>
-                                    <input type="text" class="form-control" name="alunos_cep" id="alunos_cep" onblur="preencherEndereco(this.value)" style="text-transform: uppercase;">
+                                    <label for="funcionario_cep">CEP</label>
+                                    <input type="text" class="form-control" name="funcionario_cep" id="funcionario_cep" onblur="preencherEndereco(this.value)" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_cidade">Cidade</label>
-                                    <input type="text" class="form-control" name="alunos_cidade" id="alunos_cidade">
+                                    <label for="funcionario_cidade">Cidade</label>
+                                    <input type="text" class="form-control" name="funcionario_cidade" id="funcionario_cidade">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_bairro">Bairro</label>
-                                    <input type="text" class="form-control" name="alunos_bairro" id="alunos_bairro">
+                                    <label for="funcionario_bairro">Bairro</label>
+                                    <input type="text" class="form-control" name="funcionario_bairro" id="funcionario_bairro">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_rua">Rua</label>
-                                    <input type="text" class="form-control" name="alunos_rua" id="alunos_rua">
+                                    <label for="funcionario_rua">Rua</label>
+                                    <input type="text" class="form-control" name="funcionario_rua" id="funcionario_rua">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_numero">Número</label>
-                                    <input type="text" class="form-control" name="alunos_numero" id="alunos_numero" maxlength="6" style="text-transform: uppercase;">
+                                    <label for="funcionario_numero">Número</label>
+                                    <input type="text" class="form-control" name="funcionario_numero" id="funcionario_numero" maxlength="6" style="text-transform: uppercase;">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_sexo">Sexo</label>
-                                    <select name="alunos_sexo" id="alunos_sexo" class="custom-select">
+                                    <label for="funcionario_sexo">Sexo</label>
+                                    <select name="funcionario_sexo" id="funcionario_sexo" class="custom-select">
                                         <option value="1">Masculino</option>
                                         <option value="2">Feminino</option>
                                     </select>
@@ -244,12 +263,35 @@
                             </div>
 
 
-                            <div class="col-sm-12">
+
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="alunos_data">Data</label>
-                                    <input type="date" class="form-control" name="alunos_data" id="alunos_data">
+                                    <label for="funcionario_nacionalidade">Nacionalidade</label>
+                                    <input type="text" class="form-control" name="funcionario_nacionalidade" id="funcionario_nacionalidade" style="text-transform: uppercase;">
                                 </div>
                             </div>
+
+                            
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="funcionario_estadocivil">Estado Civil</label>
+                                    <select name="funcionario_estadocivil" id="funcionario_estadocivil" class="custom-select">
+                                        <option value="1">Casado</option>
+                                        <option value="2">Solteiro</option>
+                                        <option value="3">Divorciado</option>
+                                        <option value="4">Viúvo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="funcionario_data">Data de Nascimento</label>
+                                    <input type="date" class="form-control" name="funcionario_data" id="funcionario_data">
+                                </div>
+                            </div>
+
 
 
                             
@@ -307,10 +349,10 @@ $(document).ready(function() {
 } );
 
 $(document).ready(function () { 
-    var cpf = $('#alunos_cpf');
+    var cpf = $('#funcionario_cpf');
     cpf.mask('000.000.000-00', {reverse: false});
 
-    var cep = $('#alunos_cep');
+    var cep = $('#funcionario_cep');
     cep.mask('00000-000', {reverse: false});
 });
 
@@ -318,9 +360,9 @@ $(document).ready(function () {
 
 $(function(){
     //Executa a requisição quando o campo username perder o foco
-    $('#alunos_cpf').blur(function()
+    $('#funcionario_cpf').blur(function()
     {
-        var cpf = $('#alunos_cpf').val().replace(/[^0-9]/g, '').toString();
+        var cpf = $('#funcionario_cpf').val().replace(/[^0-9]/g, '').toString();
 
         if( cpf.length == 11 )
         {
@@ -349,8 +391,8 @@ $(function(){
                     'error'
                     )
 
-                $('#alunos_cpf').val('');
-                $('#alunos_cpf').focus();
+                $('#funcionario_cpf').val('');
+                $('#funcionario_cpf').focus();
             }
         }
         
@@ -359,15 +401,15 @@ $(function(){
 
 //API VIA CEP 
 function preencherEndereco(cep){
-    $('#alunos_cidade').val('');
-    $('#alunos_bairro').val('');
-    $('#alunos_rua').val('');
+    $('#funcionario_cidade').val('');
+    $('#funcionario_bairro').val('');
+    $('#funcionario_rua').val('');
 
     $.getJSON("https://viacep.com.br/ws/"+cep+"/json/?callback=?", function(dados) {
         if (!("erro" in dados)) {       
-            $("#alunos_rua").val(dados.logradouro);
-            $("#alunos_bairro").val(dados.bairro);
-            $("#alunos_cidade").val(dados.localidade);                                
+            $("#funcionario_rua").val(dados.logradouro);
+            $("#funcionario_bairro").val(dados.bairro);
+            $("#funcionario_cidade").val(dados.localidade);                                
         }else {                        
             Swal.fire(
                     'Erro',
@@ -380,7 +422,7 @@ function preencherEndereco(cep){
 
 
 
-
+/*
 $(document).on('click', '.updateAlunos', function(){
     var id = $(this).attr('id');
 
@@ -399,7 +441,7 @@ $(document).on('click', '.updateAlunos', function(){
     
 
 })
-
+*/
 
 
 
@@ -407,12 +449,12 @@ $(document).on('click', '.updateAlunos', function(){
 
 
 // Deletar um cadastro 
-$(document).on('click', '.deleteAlunos', function(){
+$(document).on('click', '.deleteFuncionarios', function(){
     var id = $(this).attr('id');
     
     Swal.fire({
         title: 'Realmente quer fazer isto?',
-        text: "O aluno será deletado permanentemente!",
+        text: "O funcionário será deletado permanentemente!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#28a745',
@@ -421,25 +463,17 @@ $(document).on('click', '.deleteAlunos', function(){
         }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: 'deleteAlunos.php',
+                url: 'deleteFuncionarios.php',
                 type: 'POST',
                 data: {id:id},
                 success:function(data){
-                    if(data == 'true'){
-                        Swal.fire({
-                            title: 'Success',
-                            icon: 'success',
-                            text: 'Aluno deletado com sucesso!'
-                        }).then(()=>{
-                            window.location.reload();
-                        })
-                    } else {
-                        Swal.fire(
-                            'Erro',
-                            'Não é possível excluir um aluno associado a vendas!.',
-                            'error'
-                        )
-                    }
+                    Swal.fire({
+                        title: 'Success',
+                        icon: 'success',
+                        text: 'Funcionário deletado com sucesso!'
+                    }).then(()=>{
+                        window.location.reload();
+                    })
                 }
 
             })
@@ -456,23 +490,30 @@ $(document).on('click', '.deleteAlunos', function(){
 
 // Adicionar um campo, via AJAX SweetAlerts2
     $(document).ready(function(){
-        $("#newAlunosForm").submit(function(e){
+        $("#newFuncionariosForm").submit(function(e){
             e.preventDefault();
 
-            var alunos_nome = $("#alunos_nome").val(); 
-            var alunos_sobrenome = $("#alunos_sobrenome").val();
-            var alunos_rg = $("#alunos_rg").val();
-            var alunos_cpf = $("#alunos_cpf").val();
-            var alunos_cep = $("#alunos_cep").val();
-            var alunos_cidade = $("#alunos_cidade").val();
-            var alunos_bairro = $("#alunos_bairro").val();
-            var alunos_rua = $("#alunos_rua").val();
-            var alunos_numero = $("#alunos_numero").val();
-            var alunos_sexo = $("#alunos_sexo").val();
-            var alunos_data = $("#alunos_data").val();
+            var funcionario_nome = $("#funcionario_nome").val(); 
+            var funcionario_sobrenome = $("#funcionario_sobrenome").val();
+            var funcionario_descargo = $("#funcionario_descargo").val();
+            var funcionario_cargahoraria = $("#funcionario_cargahoraria").val();
+            var funcionario_salario = $("#funcionario_salario").val();
+            var funcionario_rg = $("#funcionario_rg").val();
+            var funcionario_cpf = $("#funcionario_cpf").val();
+            var funcionario_cep = $("#funcionario_cep").val();
+            var funcionario_cidade = $("#funcionario_cidade").val();
+            var funcionario_bairro = $("#funcionario_bairro").val();
+            var funcionario_rua = $("#funcionario_rua").val();
+            var funcionario_numero = $("#funcionario_numero").val();
+            var funcionario_sexo = $("#funcionario_sexo").val();
+            var funcionario_data = $("#funcionario_data").val();
+            var funcionario_nacionalidade = $("#funcionario_nacionalidade").val();
+            var funcionario_estadocivil = $("#funcionario_estadocivil").val();
+
+      
 
             
-            if(alunos_nome == '' || alunos_sobrenome == '' || alunos_rg == ''  || alunos_cpf == '' || alunos_cep == ''  || alunos_cidade == '' || alunos_bairro == '' || alunos_rua == '' || alunos_numero == '' || alunos_data == '') {
+            if(funcionario_nome == '' || funcionario_sobrenome == '' || funcionario_descargo == ''  || funcionario_cargahoraria == '' || funcionario_salario == ''  || funcionario_rg == '' || funcionario_cpf == '' || funcionario_cep == '' || funcionario_cidade == '' || funcionario_bairro == '' || funcionario_rua == '' || funcionario_numero == '' || funcionario_data == '' || funcionario_nacionalidade == '') {
                 Swal.fire(
                     'Erro',
                     'Por favor, preencha os campos corretamente!',
@@ -480,15 +521,15 @@ $(document).on('click', '.deleteAlunos', function(){
                     )
             } else {
                 $.ajax({
-                    url: 'newAlunos.php',
+                    url: 'newFuncionarios.php',
                     type: 'POST',
                     data: $(this).serialize(),
                     cache: false,
                     success:function(data){
-                        $('#newAlunosModal').hide();
+                        $('#newFuncionariosModal').hide();
                         Swal.fire({
                             title: 'Success',
-                            text: 'Aluno adicionado com sucesso!',
+                            text: 'Funcionário adicionado com sucesso!',
                             icon: 'success'
                         }).then(()=>{
                             window.location.reload();

@@ -61,7 +61,7 @@
                   </li>
                   <li title="Cadastro de Alunos"><a href="newCadAlunos.php"><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
                   </li>
-                  <li title="Cadastro de Funcionários"><a href="../index.html"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
+                  <li title="Cadastro de Funcionários"><a href="newCadFuncionarios.php"><span class="nav-icon material-icons ">badge</span> Funcionário </a>
                   </li>
                   <li title="Cadastro de Planos"><a href="newCadPlanos.php"><span class="nav-icon material-icons ">note_add</span> Planos </a>
                   </li>
