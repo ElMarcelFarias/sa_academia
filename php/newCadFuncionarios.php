@@ -422,26 +422,24 @@ function preencherEndereco(cep){
 
 
 
-/*
-$(document).on('click', '.updateAlunos', function(){
+
+$(document).on('click', '.updateFuncionarios', function(){
     var id = $(this).attr('id');
 
     
     $("#modal_edit").html('');
     $.ajax({
-        url: 'viewAlunos.php',
+        url: 'viewFuncionarios.php',
         type: 'POST',
         cache: false,
         data: {id:id},
         success:function(data){
             $("#modal_edit").html(data);
-            $("#updateAlunosModal").modal('show');
+            $("#updateFuncionariosModal").modal('show');
         }
     })
-    
-
 })
-*/
+
 
 
 
