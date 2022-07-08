@@ -25,7 +25,7 @@
 <body>
     
     <!-- Pre Loader-->
-    <!--
+    
     <div class="loader-wrapper">
         <div class="spinner">
           <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
             <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
           </svg>
         </div>
-    </div>-->    
+    </div>
     <!-- Pre Loader-->
 
 
@@ -57,6 +57,7 @@
             <nav class="navigation">
               <ul>
                   <li class="active"><a href="index.html" data-toggle="modal" data-target="#newSellModal" title="Adicionar nova Venda"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  
                   <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">sell</span> Vendas </a>
                   </li>
                   <li title="Cadastro de Alunos"><a href="newCadAlunos.php"><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
@@ -73,6 +74,8 @@
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
                   <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><form action="gerarPDF.php"><button type="" class="btn text-center" style="background-color: transparent; color: #6c757d;"><span class="ml-1 mr-2 nav-icon material-icons">picture_as_pdf</span>Gerar PDF</button></form></li>
+                  
               </ul>
             </nav>
 
