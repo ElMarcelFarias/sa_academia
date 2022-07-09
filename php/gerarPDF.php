@@ -71,7 +71,7 @@ while($row = $query->fetch_assoc()){
 
         $mpdf->WriteHTML("<td>".date('d/m/Y', strtotime($row['data']))."</td>");
 
-        $mpdf->WriteHTML("<td>".$row['formaPagamento']."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row['formaPagamento'])."</td>");
             
 
 

@@ -55,7 +55,7 @@
 
             <nav class="navigation">
               <ul>
-                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newFuncionariosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newFuncionariosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Cadastro</a></li>
                   <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">badge</span> Funcionário </a>
                   </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>

@@ -62,7 +62,7 @@
                                                     </div>
 
                                                     <div class="col-lg-12 mb-0">
-                                                        <button class="btn btn-primary btn-block">Sign in</button>
+                                                        <button class="btn btn-primary btn-block">Entrar</button>
                                                     </div>
 
                                                     <div class="col-lg-12 mt-4 text-center">

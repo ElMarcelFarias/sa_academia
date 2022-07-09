@@ -55,7 +55,7 @@
 
             <nav class="navigation">
               <ul>
-                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newAlunosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newAlunosModal" title="Adicionar novo Aluno"><span class="nav-icon material-icons">add</span> Cadastro</a></li>
                   <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">fitness_center</span> Aluno </a>
                   </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>
@@ -247,7 +247,7 @@
 
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="alunos_data">Data</label>
+                                    <label for="alunos_data">Data de Nascimento</label>
                                     <input type="date" class="form-control" name="alunos_data" id="alunos_data">
                                 </div>
                             </div>

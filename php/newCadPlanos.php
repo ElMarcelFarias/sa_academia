@@ -55,7 +55,7 @@
 
             <nav class="navigation">
               <ul>
-                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newPlanosModal" title="Adicionar novo Plano"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newPlanosModal" title="Adicionar novo Plano"><span class="nav-icon material-icons">add</span> Cadastro</a></li>
                   <li class="active" title="Cadastro de Planos"><a><span class="nav-icon material-icons ">note_add</span> Planos </a>
                   </li>
                   <li title="Cadastro de Alunos"><a href="index.php"><span class="nav-icon material-icons ">sell</span> Vendas </a>

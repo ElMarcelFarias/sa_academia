@@ -56,7 +56,7 @@
 
             <nav class="navigation">
               <ul>
-                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newSellModal" title="Adicionar nova Venda"><span class="nav-icon material-icons">add</span> Add</a></li>
+                  <li class="active"><a href="index.html" data-toggle="modal" data-target="#newSellModal" title="Adicionar nova Venda"><span class="nav-icon material-icons">add</span> Cadastro</a></li>
                   
                   <li class="active" title="Cadastro de Alunos"><a><span class="nav-icon material-icons ">sell</span> Vendas </a>
                   </li>
@@ -225,7 +225,7 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="data_vendas">Data</label>
+                                        <label for="data_vendas">Data de Inicio</label>
                                         <input type="date" class="form-control" name="data_vendas" id="data_vendas">
                                     </div>
                                 </div>
