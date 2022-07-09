@@ -3,8 +3,7 @@
 require_once("../vendor/autoload.php");
 require_once("conexaoBanco.php");
 
-$sql = "SELECT a.nome as nomeAluno, a.sobrenome as sobrenomeAluno, p.nome as nomePlano, v.* FROM alunos as a inner join vendas as v on a.idAluno = v.alunos_idAluno
-                    inner join planos as p on p.idPlano = v.planos_idPlano";
+$sql = "SELECT * FROM funcionarios";
 $query = $con->query($sql) or die($con->error);
 
 // Create an instance of the class:
@@ -54,9 +53,8 @@ $mpdf->WriteHTML('
 
 
 $mpdf->WriteHTML('<br>');
-$mpdf->WriteHTML('<h3>Venda:</h3>');
+$mpdf->WriteHTML('<h3>Alunos:</h3>');
 $mpdf->WriteHTML('<br>');
-
 
 
 $mpdf->WriteHTML('<table id="example" class="table table-striped mb-4 bg-white table-bordered">');
@@ -65,13 +63,17 @@ while($row = $query->fetch_assoc()){
 
     $mpdf->WriteHTML('<tr>');
 
-        $mpdf->WriteHTML("<td>".strtoupper($row["nomeAluno"]." ".$row["sobrenomeAluno"])."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row["nome"]." ".$row["sobrenome"])."</td>");
 
-        $mpdf->WriteHTML("<td>".strtoupper($row["nomePlano"])."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row["cpf"])."</td>");
 
-        $mpdf->WriteHTML("<td>".date('d/m/Y', strtotime($row['data']))."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row["descCargo"])."</td>");
 
-        $mpdf->WriteHTML("<td>".$row['formaPagamento']."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row["salario"])."</td>");
+
+        $mpdf->WriteHTML("<td>".strtoupper($row["cargaHoraria"])."</td>");
+
+        $mpdf->WriteHTML("<td>".date('m/Y', strtotime($row['dataNascimento']))."</td>");
             
 
 

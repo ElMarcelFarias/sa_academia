@@ -72,6 +72,7 @@
               <label title="Documentação"><span>Ajuda para Usuários<span></label>
               <ul>
                   <li><a href="https://github.com/ElMarcelFarias/sa_academia" title="Documentação" target="_blank"><span class="nav-icon material-icons">school</span> Documentação</a></li>
+                  <li><form action="gerarPDFPlanos.php"><button type="" class="btn text-center" style="background-color: transparent; color: #6c757d;"><span class="ml-1 mr-2 nav-icon material-icons">picture_as_pdf</span>Gerar PDF</button></form></li>
               </ul>
             </nav>
 
