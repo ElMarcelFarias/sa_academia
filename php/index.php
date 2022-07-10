@@ -269,7 +269,19 @@
     <script src="../assets/js/custom.js"></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.18/sweetalert2.all.min.js"></script>
+
+
+<?php if(isset($_GET['return'])) { ?>
+<script>
+//Validação do retorno de nivel de usuário para cadastro de planos
+    Swal.fire(
+            'Erro',
+            'Você não tem permissão para acessar esse cadastro!',
+            'error'
+            )
+</script>
+<?php } ?>
 
 <script>
 //DataTables script 

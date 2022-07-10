@@ -1,5 +1,12 @@
 <?php include_once 'conexaoBanco.php';?>
 
+<?php
+    session_start();
+    if(isset($_SESSION['nivel']) && $_SESSION['nivel'] == 1) {
+        
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -541,5 +548,11 @@ $(document).on('click', '.deleteFuncionarios', function(){
     })
     
 </script>
+<?php
+
+} else {
+    header("Location: index.php?return=false");
+}
+?>
 </body>
 </html>
