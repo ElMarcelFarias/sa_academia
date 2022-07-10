@@ -67,7 +67,7 @@ while($row = $query->fetch_assoc()){
 
         $mpdf->WriteHTML("<td>".strtoupper($row["preco"])."</td>");
 
-        $mpdf->WriteHTML("<td>".$row['duracao']."</td>");
+        $mpdf->WriteHTML("<td>".strtoupper($row['duracao'])."</td>");
             
 
 
