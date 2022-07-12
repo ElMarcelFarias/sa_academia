@@ -11,6 +11,18 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 | ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175963012-08663ec6-c86c-4d0e-a686-deacb028266c.png)      | 
 <br>
 
+|   Login - Autenticação   |  
+| :---:        | 
+| ![login1](https://user-images.githubusercontent.com/92833379/178506386-27ab2382-94b9-4cf8-9f77-665b281b5313.jpg)| 
+| ![login2](https://user-images.githubusercontent.com/92833379/178506576-53e89e41-064b-447e-9cec-d093213aa1ca.jpg)| 
+
+<br>
+
+|      |  FocusBody ADM  |        |
+|    :---:     |     :---:      |     :---:     |
+| ![screen1](https://user-images.githubusercontent.com/92833379/175951738-1cd19cde-d7e8-483f-ab10-3208c35ccd76.png)   | ![screen2](https://user-images.githubusercontent.com/92833379/175951792-540466d4-f0f8-47ad-95b0-d387d12f4756.png)     | ![screen3](https://user-images.githubusercontent.com/92833379/175951818-43294389-7690-46e5-9fa5-88f5b7ac7535.png)    |
+| ![screen4](https://user-images.githubusercontent.com/92833379/175951854-66e79e57-82ee-42e7-af7e-c0a6d41fbe2b.png)     | ![screen5](https://user-images.githubusercontent.com/92833379/175951886-c9535774-72e0-429d-a3a8-eeb82fb6a289.png)       | ![screen6](https://user-images.githubusercontent.com/92833379/175963012-08663ec6-c86c-4d0e-a686-deacb028266c.png)      | 
+
 <h3><i>Situação Problema:</i></h3>
 <hr>
 <p>
