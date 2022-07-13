@@ -54,7 +54,7 @@
         <!-- SIDEBAR -->
         <aside class="sidebar">
             <nav class="navbar navbar-dark bg-primary">
-              <a class="navbar-brand m-0 py-2 brand-title" href="#">Focus Admin</a>
+              <a class="navbar-brand m-0 py-2 brand-title" href="index.php">Focus Admin</a>
               <span></span>
               <a class="navbar-brand py-2 material-icons toggle-sidebar" href="#">menu</a>
             </nav>
