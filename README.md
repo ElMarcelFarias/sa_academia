@@ -67,20 +67,6 @@ criatividade</i></li>
 <hr>
 
 
-(BACK-END EM ANDAMENTO)
-Cadastro de Alunos concluído
-Falta coisas
-
-Demandas para segunda-feira:
-TODOS OS CRUDS FINALIZADOS, FALTA REALIZAR O README
-
-
-
-Coisas para o futuro
-Relatório em PDF botão ao lado do search
-
-
-
 <br>
 <i>FocusBody &copy; 2022 Marcel Leite de Farias</i>
 
