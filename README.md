@@ -1,7 +1,7 @@
 # sa_academia 🏋️‍♀️
 
 Software / Website desenvolvido para um projeto de conclusão de semestre chamado "Situação de Aprendizagem" realizado pela instituição SENAI - Serviço Nacional de Aprendizagem Industrial.
-Onde demonstramos todo o aprendizado ao longo do semestre na disciplina "Desenvolvimento de Sistemas". <br>
+Onde demonstramos todo o aprendizado ao longo do curso na disciplina "Desenvolvimento de Sistemas". <br>
 
 A ideia inicial do projeto é criar um Software / Website para uma empresa fictícia (FocusBody) onde conseguiriamos satisfazer o cliente. Primeira parte do projeto é a estilização e a criação da landing page (FRONT-END):
 
