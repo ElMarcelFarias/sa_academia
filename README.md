@@ -28,7 +28,7 @@ A ideia inicial do projeto é criar um Software / Website para uma empresa fict�
 <h3><i>Situação Problema:</i></h3>
 <hr>
 <p>
-Devido a necessidade, foi apresentada a seguinte situação problema: "Uma academia está tendo problemas para realizar a venda de seus planos, devido a demanda muito alta de alunos novos. Esses planos são ofertados e vendidos via telefone. Os alunos possuem um cadastro que é preenchido pelo atendente da academia ao entrarem em contato com a mesma, onde geralmente é pedido o nome do aluno completo, CPF, e-mail, RG, qual o plano gostaria de adquirir, mostrando os benefícios do mesmo e forma de pagamento(boleto, débito, crédito, dinheiro). Com o aumento expressivo de alunos novos, vem gerando problemas ao preencher e atualizar esses dados à mão, além de excluir os alunos que já não fazem mais parte do estabelecimento.
+Devido a necessidade, foi apresentada a seguinte situação problema: "Uma academia está tendo problemas para realizar a venda de seus planos, devido a demanda muito alta de alunos novos. Esses planos são ofertados e vendidos via telefone. Os alunos possuem um cadastro que é preenchido pelo atendente da academia ao entrarem em contato com a mesma, onde geralmente é pedido o nome do aluno completo, CPF, e-mail, RG, qual o plano gostaria de adquirir, mostrando os benefícios do mesmo e a forma de pagamento (boleto, débito, crédito, dinheiro). Com o aumento expressivo de alunos novos, vem gerando problemas ao preencher e atualizar esses dados à mão, além de excluir os alunos que já não fazem mais parte do estabelecimento.
 
 Após definida a situação problema, foi realizada o levantamento de requisitos e então se iniciou o desenvolvimento dos CRUD's:
 </p>
